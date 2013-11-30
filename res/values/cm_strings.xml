@@ -38,4 +38,8 @@
     <string name="navigation_bar_reset_message">Delete current settings and restore the default layout?</string>
     <string name="navigation_ring_title">Navigation ring</string>
     <string name="navigation_ring_message">Tap the edit icon to open the navigation ring for editing.\n\nSelect a target to configure its behavior.\n\nTap the check mark icon to save your changes, or restore to reset the settings to defaults.</string>
+
+    <!-- Development shortcut -->
+    <string name="development_shortcut_title">Development shortcut</string>
+    <string name="development_shortcut_summary">Enable application management shortcuts in notification area and recent apps list</string>
 </resources>
