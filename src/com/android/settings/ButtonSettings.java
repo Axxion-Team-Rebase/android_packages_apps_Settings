@@ -40,6 +40,7 @@ import android.content.Context;
 import android.media.AudioSystem;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -59,6 +60,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.HashMap;
 
+import com.android.settings.nameless.CustomActionListPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.SettingsPreferenceFragment;
@@ -75,6 +77,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final String CATEGORY_MENU = "button_keys_menu";
     private static final String CATEGORY_ASSIST = "button_keys_assist";
     private static final String CATEGORY_APPSWITCH = "button_keys_appSwitch";
+    private static final String CATEGORY_POWER_CHORD = "power_chord";
 
     private static final String BUTTON_VOLUME_WAKE = "button_volume_wake_screen";
     private static final String BUTTON_HOME_WAKE = "button_home_wake_screen";
@@ -127,6 +130,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
     private static final int KEY_MASK_ASSIST = 0x08;
     private static final int KEY_MASK_APP_SWITCH = 0x10;
 
+    private CustomActionListPreference mPowerKeyDownAction;
+    private CustomActionListPreference mPowerKeyUpAction;
     private CheckBoxPreference mVolumeWake;
     private CheckBoxPreference mHomeWake;
     private CheckBoxPreference mHomeAnswerCall;
@@ -441,6 +446,17 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
                     Settings.System.HARDWARE_KEY_REBINDING, 0) == 1));
             mEnableCustomBindings.setOnPreferenceChangeListener(this);
 
+			mPowerKeyDownAction = (CustomActionListPreference)
+					findPreference(Settings.System.POWER_CHORD_ACTION_DOWN);
+			if (mPowerKeyDownAction != null) {
+				mPowerKeyDownAction.setOnPreferenceChangeListener(this);
+			}
+
+			mPowerKeyUpAction = (CustomActionListPreference)
+					findPreference(Settings.System.POWER_CHORD_ACTION_UP);
+			if (mPowerKeyUpAction != null) {
+				mPowerKeyUpAction.setOnPreferenceChangeListener(this);
+			}
 //            Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 //            if (vibrator == null || !vibrator.hasVibrator()) {
 //                removePreference(VIRTUAL_KEY_HAPTIC_FEEDBACK);
@@ -656,7 +672,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 //            int value = Integer.valueOf((String) newValue);
 //            Settings.System.putInt(getContentResolver(), Settings.System.VOLUME_KEYS_DEFAULT, value);
 //            return true;
-        }
+		 } else if (preference == mPowerKeyDownAction) {
+				final String value = String.valueOf(newValue);
+            mPowerKeyDownAction.putSystemValue(value);
+            return true;
+		 } else if (preference == mPowerKeyUpAction) {
+            final String value = String.valueOf(newValue);
+            mPowerKeyUpAction.putSystemValue(value);
+            return true;
+			}          
         return false;
     }
 
