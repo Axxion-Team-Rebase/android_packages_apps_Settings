@@ -109,4 +109,5 @@
     <attr name="switchBarMarginEnd" format="dimension" />
 
     <attr name="preferenceBackgroundColor" format="color" />
+
 </resources>
