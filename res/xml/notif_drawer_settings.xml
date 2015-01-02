@@ -24,5 +24,9 @@
             android:entryValues="@array/quick_pulldown_values"
             android:persistent="false" />
 
+		<PreferenceScreen
+            android:key="qs_settings"
+            android:title="@string/qs_settings_title"
+            android:fragment="com.android.settings.axxion.QSSettings" />
 </PreferenceScreen>
 

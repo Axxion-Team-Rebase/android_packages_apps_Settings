@@ -68,6 +68,7 @@ import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
+import com.android.settings.applications.ExpandedDesktopPreferenceFragment;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
@@ -112,9 +113,9 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
+import com.android.settings.terminus.qs.QSTiles;
 
 import org.omnirom.omnigears.ButtonSettings;
-import com.brewcrewfoo.performance.activities.MainActivity;
 import org.omnirom.omnigears.batterylight.BatteryLightSettings;
 import org.omnirom.omnigears.brightness.ButtonBrightnessSettings;
 import com.android.settings.axxion.NavBarSettings;
@@ -316,15 +317,11 @@ public class SettingsActivity extends Activity
             QuickLaunchSettings.class.getName(),
             ApnSettings.class.getName(),
             ButtonSettings.class.getName(),
-            MainActivity.class.getName(),
             BatteryLightSettings.class.getName(),
-<<<<<<< HEAD
             ButtonBrightnessSettings.class.getName(),
-			NavBarSettings.class.getName()
-=======
-			NavigationSettings.class.getName(),
-	        AxxionSettings.class.getName()
->>>>>>> dea3248... Settings: statusbar clock customization + initial interface + color
+			NavBarSettings.class.getName(),
+	        AxxionSettings.class.getName(),
+			QSTiles.class.getName(),
     };
 
 
