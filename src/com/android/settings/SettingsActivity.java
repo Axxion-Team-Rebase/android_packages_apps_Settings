@@ -68,6 +68,7 @@ import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accounts.AccountSettings;
 import com.android.settings.accounts.AccountSyncSettings;
+import com.android.settings.applications.ExpandedDesktopPreferenceFragment;
 import com.android.settings.applications.InstalledAppDetails;
 import com.android.settings.applications.ManageApplications;
 import com.android.settings.applications.ProcessStatsUi;
@@ -113,6 +114,7 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
+import com.android.settings.terminus.qs.QSTiles;
 
 import com.android.settings.axxion.AxxionSettings;
 import com.android.settings.ButtonSettings;
@@ -318,7 +320,12 @@ public class SettingsActivity extends Activity
             MainActivity.class.getName(),
             BatteryLightSettings.class.getName(),
 			NavigationSettings.class.getName(),
+<<<<<<< HEAD
 	        AxxionSettings.class.getName()
+=======
+            InterfaceSettings.class.getName()
+			QSTiles.class.getName(),
+>>>>>>> 31921ae... Customizeable QS Tiles (2/2) Squashed
     };
 
 

@@ -19,7 +19,13 @@ package com.android.settings;
 import com.android.settings.applications.AppOpsSummary;
 import com.android.settings.ButtonSettings;
 import com.brewcrewfoo.performance.activities.MainActivity;
+<<<<<<< HEAD
 import com.android.settings.batterylight.BatteryLightSettings;
+=======
+import org.omnirom.omnigears.batterylight.BatteryLightSettings;
+import com.android.settings.terminus.qs.QSTiles;
+
+>>>>>>> 31921ae... Customizeable QS Tiles (2/2) Squashed
 /**
  * Top-level Settings activity
  */
@@ -105,5 +111,6 @@ public class Settings extends SettingsActivity {
     public static class ButtonSettingsActivity extends SettingsActivity { /* empty */ }
     public static class MainActivityActivity extends SettingsActivity { /* empty */ }
     public static class BatteryLightSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class QSTilesSettingsActivity extends SettingsActivity { /* empty */ }
 }
 
