@@ -35,5 +35,4 @@
             android:summary="@string/navigation_bar_left_summary"
             android:dependency="navbar_force_enable"
             android:defaultValue="false" />
-
 </PreferenceScreen>
