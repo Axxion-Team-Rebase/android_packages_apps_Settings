@@ -447,13 +447,13 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
             mEnableCustomBindings.setOnPreferenceChangeListener(this);
 
 			mPowerKeyDownAction = (CustomActionListPreference)
-					findPreference(Settings.System.POWER_CHORD_ACTION_DOWN);
+					findPreference(Settings.Secure.POWER_CHORD_ACTION_DOWN);
 			if (mPowerKeyDownAction != null) {
 				mPowerKeyDownAction.setOnPreferenceChangeListener(this);
 			}
 
 			mPowerKeyUpAction = (CustomActionListPreference)
-					findPreference(Settings.System.POWER_CHORD_ACTION_UP);
+					findPreference(Settings.Secure.POWER_CHORD_ACTION_UP);
 			if (mPowerKeyUpAction != null) {
 				mPowerKeyUpAction.setOnPreferenceChangeListener(this);
 			}
@@ -672,13 +672,13 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 //            int value = Integer.valueOf((String) newValue);
 //            Settings.System.putInt(getContentResolver(), Settings.System.VOLUME_KEYS_DEFAULT, value);
 //            return true;
-		 } else if (preference == mPowerKeyDownAction) {
-				final String value = String.valueOf(newValue);
-            mPowerKeyDownAction.putSystemValue(value);
+        } else if (preference == mPowerKeyDownAction) {
+            final String value = String.valueOf(newValue);
+            mPowerKeyDownAction.putSecureValue(value);
             return true;
 		 } else if (preference == mPowerKeyUpAction) {
             final String value = String.valueOf(newValue);
-            mPowerKeyUpAction.putSystemValue(value);
+            mPowerKeyUpAction.putSecureValue(value);
             return true;
 			}          
         return false;
