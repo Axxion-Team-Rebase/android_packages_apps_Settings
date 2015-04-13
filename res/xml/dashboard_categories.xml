@@ -105,7 +105,6 @@
                     android:targetPackage="com.grarak.kerneladiutor"
                     android:targetClass="com.grarak.kerneladiutor.MainActivity" />
         </dashboard-tile>
-
     </dashboard-category>
 
     <!-- DEVICE -->

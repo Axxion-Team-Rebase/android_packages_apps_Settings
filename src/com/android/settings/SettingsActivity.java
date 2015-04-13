@@ -117,6 +117,7 @@ import org.omnirom.omnigears.ButtonSettings;
 import com.brewcrewfoo.performance.activities.MainActivity;
 import org.omnirom.omnigears.batterylight.BatteryLightSettings;
 import org.omnirom.omnigears.brightness.ButtonBrightnessSettings;
+import com.android.settings.axxion.NavBarSettings;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -245,7 +246,8 @@ public class SettingsActivity extends Activity
             R.id.nfc_payment_settings,
             R.id.home_settings,
             R.id.button_settings,
-            R.id.dashboard
+            R.id.dashboard,
+            R.id.navigation_settings
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -313,7 +315,8 @@ public class SettingsActivity extends Activity
             ButtonSettings.class.getName(),
             MainActivity.class.getName(),
             BatteryLightSettings.class.getName(),
-            ButtonBrightnessSettings.class.getName()
+            ButtonBrightnessSettings.class.getName(),
+			NavBarSettings.class.getName()
     };
 
 
