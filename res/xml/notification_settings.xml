@@ -122,7 +122,7 @@
         <PreferenceScreen
                 android:key="battery_light"
                 android:title="@string/battery_light_settings"
-                android:fragment="org.omnirom.omnigears.batterylight.BatteryLightSettings" />
+                android:fragment="com.android.settings.batterylight.BatteryLightSettings" />
 
         <!-- App notifications -->
         <PreferenceScreen

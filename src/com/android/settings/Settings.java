@@ -17,9 +17,9 @@
 package com.android.settings;
 
 import com.android.settings.applications.AppOpsSummary;
-import org.omnirom.omnigears.ButtonSettings;
+import com.android.settings.ButtonSettings;
 import com.brewcrewfoo.performance.activities.MainActivity;
-import org.omnirom.omnigears.batterylight.BatteryLightSettings;
+import com.android.settings.batterylight.BatteryLightSettings;
 /**
  * Top-level Settings activity
  */

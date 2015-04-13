@@ -113,9 +113,9 @@ import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 
-import org.omnirom.omnigears.ButtonSettings;
+import com.android.settings.ButtonSettings;
 import com.brewcrewfoo.performance.activities.MainActivity;
-import org.omnirom.omnigears.batterylight.BatteryLightSettings;
+import com.android.settings.batterylight.BatteryLightSettings;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -1237,18 +1237,6 @@ public class SettingsActivity extends Activity
                     if (!supported) {
                         removeTile = true;
                     }
-                } else if (id == R.id.advanced_settings) {
-                    boolean supported = false;
-                    try {
-                        // this will throw NameNotFoundException if not installed
-                        getPackageManager().getPackageInfo("org.omnirom.device", PackageManager.GET_META_DATA);
-                        supported = true;
-                    } catch (NameNotFoundException e){
-                    }
-                    if (!supported) {
-                        removeTile = true;
-                    }
-                }
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
                         && !ArrayUtils.contains(SETTINGS_FOR_RESTRICTED, id)) {
                     removeTile = true;

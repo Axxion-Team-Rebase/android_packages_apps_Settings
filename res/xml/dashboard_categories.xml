@@ -76,29 +76,28 @@
             android:id="@+id/interface_section"
             android:title="@string/header_category_interface" >
 
-        <!-- Bars
+        <!-- BitSyko Layers App -->
         <dashboard-tile
-               android:id="@+id/interface_bars"
-               android:title="@string/interface_bars_title"
-               android:fragment="org.omnirom.omnigears.interfacesettings.BarsSettings"
-               android:icon="@drawable/ic_bars"
-               /> -->
+                android:id="@+id/bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/bitsyko_layers">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.lovejoy777.rroandlayersmanager"
+                    android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+        </dashboard-tile>
 
-        <!-- Menus
+        <!-- Kernel Auditor App -->
         <dashboard-tile
-               android:id="@+id/interface_menus"
-               android:title="@string/interface_menus_title"
-               android:fragment="org.omnirom.omnigears.interfacesettings.MenusSettings"
-               android:icon="@drawable/ic_menus"
-               /> -->
+                android:id="@+id/kernel_auditor"
+                android:icon="@drawable/ic_liquid_performance_teal"
+                android:title="@string/performance_settings">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.grarak.kerneladiutor"
+                    android:targetClass="com.grarak.kerneladiutor.MainActivity" />
+        </dashboard-tile>
 
-        <!-- More
-        <dashboard-tile
-               android:id="@+id/interface_more"
-               android:title="@string/radio_controls_title"
-               android:fragment="org.omnirom.omnigears.interfacesettings.MoreInterfaceSettings"
-               android:icon="@drawable/ic_settings_more"
-               /> -->
     </dashboard-category>
 
     <!-- DEVICE -->
@@ -126,7 +125,7 @@
         <dashboard-tile
                 android:id="@+id/button_settings"
                 android:title="@string/button_settings"
-                android:fragment="org.omnirom.omnigears.ButtonSettings"
+                android:fragment="com.android.settings.ButtonSettings"
                 android:icon="@drawable/ic_buttons"
                 />
 
@@ -183,17 +182,6 @@
                 android:id="@+id/manufacturer_settings"
                 android:fragment="com.android.settings.WirelessSettings">
             <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
-        </dashboard-tile>
-
-        <!-- Advanced Settings -->
-        <dashboard-tile
-            android:id="@+id/advanced_settings"
-            android:title="@string/advanced_settings_title"
-            android:icon="@drawable/ic_settings_advanced">
-            <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetClass="org.omnirom.device.DeviceSettings"
-                    android:targetPackage="org.omnirom.device" />
         </dashboard-tile>
 
     </dashboard-category>
@@ -292,13 +280,6 @@
                 android:targetPackage="eu.chainfire.supersu"
                 android:targetClass="eu.chainfire.supersu.MainActivity" />
         </dashboard-tile>
-
-        <!-- PerformanceControl -->
-        <dashboard-tile
-                android:id="@+id/performance_controls"
-                android:fragment="com.brewcrewfoo.performance.activities.MainActivity"
-                android:icon="@drawable/ic_settings_performance"
-                android:title="@string/performance_settings" />
 
         <!-- About Device -->
         <dashboard-tile

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2013 The OmniROM Project
+
+  Parts Copyright (C) 2012-2013 The CyanogenMod Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Hardware keys -->
+    <string name="button_keys_title">Keys</string>
+    <string name="keys_bindings_title">Key actions</string>
+    <string name="button_keys_back_title" >Back key</string>
+    <string name="button_keys_home_title" >Home key</string>
+    <string name="button_keys_menu_title" >Menu key</string>
+    <string name="button_keys_assist_title" >Search key</string>
+    <string name="button_keys_appSwitch_title" >App switch key</string>
+    <string name="keys_enable_custom_title">Custom actions</string>
+    <string name="keys_back_press_title">Back key</string>
+    <string name="keys_back_long_press_title">Back key (long press)</string>
+    <string name="keys_home_press_title">Home key</string>
+    <string name="keys_home_long_press_title">Home key (long press)</string>
+    <string name="keys_home_double_tap_title">Home key (double tap)</string>
+    <string name="keys_menu_press_title">Menu key</string>
+    <string name="keys_menu_long_press_title">Menu key (long press)</string>
+    <string name="keys_assist_press_title">Search key</string>
+    <string name="keys_assist_long_press_title">Search key (long press)</string>
+    <string name="keys_app_switch_press_title">App switch key</string>
+    <string name="keys_app_switch_long_press_title">App switch key (long press)</string>
+    <string name="keys_action_nothing">No action</string>
+    <string name="keys_action_menu">Open/close menu</string>
+    <string name="keys_action_app_switch">Recent apps switcher</string>
+    <string name="keys_action_search">Search assistant</string>
+    <string name="keys_action_voice_search">Voice search</string>
+    <string name="keys_action_in_app_search">In-app search</string>
+    <string name="keys_action_home">Home button</string>
+    <string name="keys_action_back">Back button</string>
+    <string name="keys_action_last_app">Switch to last app</string>
+    <string name="keys_action_kill_app">Kill app</string>
+    <string name="keys_action_normal">Normal press</string>
+    <string name="keys_action_long">Long press</string>
+    <string name="keys_action_double">Double tap</string>
+    <string name="dialog_no_home_key_title">No home action</string>
+    <string name="no_home_key">You have no button assigned to the \"Home\" action! This can make your device unusable!</string>
+    <string name="button_volume_keys_title">Volume</string>
+    <string name="button_volume_wake_title">Button wake</string>
+    <string name="button_volume_wake_summary">Pressing a volume button will wake the device</string>
+    <string name="keys_action_sleep">Go to sleep</string>
+    <string name="keys_action_omniswitch">OmniSwitch recents</string>
+    <string name="button_home_wake_title">Button wake</string>
+    <string name="button_home_wake_summary">Pressing the home button will wake the device</string>
+    <string name="button_home_answers_call_title">Button answers call</string>
+    <string name="button_home_answers_call_summary">Pressing the home button will answer incoming call</string>
+
+    <!-- Doze pulse (ambient display) options -->
+    <string name="doze_overwrite_value_title">Overwrite value</string>
+    <string name="doze_overwrite_value_summary">Allow to overwrite default value with user config</string>
+
+    <string name="doze_list_mode_title">Doze mode</string>
+    <string name="doze_list_mode_summary">Option to configure doze mode</string>
+
+    <string name="doze_pulse_title">Time settings</string>
+    <string name="doze_pulse_duration_in_title">Fade in</string>
+    <string name="doze_pulse_duration_in_summary"></string>
+
+    <string name="doze_pulse_duration_visible_title">Visible duration</string>
+    <string name="doze_pulse_duration_visible_summary"></string>
+
+    <string name="doze_pulse_duration_out_title">Fade out</string>
+    <string name="doze_pulse_duration_out_summary"></string>
+
+    <string name="doze_pulse_on_notifications_title">Pulse on notifications</string>
+    <string name="doze_pulse_on_notifications_summary">Trigger activation only on pending notifications</string>
+
+    <string name="doze_shake_title">Shake settings</string>
+    <string name="doze_shake_mode_title">Shake mode</string>
+    <string name="doze_shake_mode_summary">Use shake sensor value to trigger activation</string>
+    <string name="doze_shake_mode_test_summary">Do you want to test shake sensor?</string>
+    <string name="doze_shake_mode_test_result">Apply current value?</string>
+    <string name="doze_shake_test">Shake your device now</string>
+    <string name="doze_shake_it">Shake detected!</string>
+
+    <string name="doze_shake_acc_threshold_title">Shake threshold</string>
+    <string name="doze_shake_acc_threshold_summary">Configure shake strength required to trigger activation</string>
+
+    <string name="doze_time_mode_title">Show clock and date</string>
+    <string name="doze_time_mode_summary">Force showing time when there is no notification</string>
+
+    <string name="twohundred_ms">200 ms</string>
+    <string name="fivehundred_ms">500 ms</string>
+    <string name="one_second">1 s</string>
+    <string name="one_second_default">1 s (default)</string>
+    <string name="onehalf_second">1.5 s</string>
+    <string name="two_second">2 s</string>
+    <string name="twohalf_second">2.5 s</string>
+    <string name="three_second">3 s</string>
+    <string name="three_second_default">3 s (default)</string>
+    <string name="threehalf_second">3.5 s</string>
+    <string name="four_second">4 s</string>
+    <string name="fourhalf_second">4.5 s</string>
+    <string name="five_second">5 s</string>
+
+    <string name="veryeasy_shake">Very easy</string>
+    <string name="easy_shake">Easy</string>
+    <string name="medium_shake">Default</string>
+    <string name="hard_shake">Hard</string>
+    <string name="veryhard_shake">Very hard</string>
+    <string name="strong_shake">Strong</string>
+
+    <string name="fully_mode">Full mode</string>
+    <string name="pocket_shake_mode">Pocket and shake</string>
+    <string name="pocket_pulse_mode">Pocket and pulse</string>
+    <string name="pocket_only_mode">Pocket</string>
+    <string name="shake_pulse_mode">Shake and pulse</string>
+    <string name="pulse_only_mode">Pulse (default)</string>
+
+    <!-- Swap volume buttons when the screen is rotated -->
+    <string name="swap_volume_buttons_title">Match rotation</string>
+    <string name="swap_volume_buttons_summary">Adjust volume buttons action based on current rotation</string>
+
+    <string name="color_picker_dialog_title">Color</string>
+
+    <!-- Battery light settings  -->
+    <string name="battery_light_enable">Enable</string>
+    <string name="battery_low_pulse_title">Pulse if battery low</string>
+    <string name="battery_light_list_title">Colors</string>
+    <string name="battery_light_low_color_title">Battery low</string>
+    <string name="battery_light_medium_color_title">Charging</string>
+    <string name="battery_light_full_color_title">Charged (90%)</string>
+    <string name="battery_light_really_full_color_title">Charged (100%)</string>
+    <string name="edit_battery_settings">Edit battery settings</string>
+    <string name="notification_light_general_title">General</string>
+    <string name="led_color_green">Green</string>
+    <string name="led_color_red">Red</string>
+    <string name="led_color_blue">Blue</string>
+</resources>
