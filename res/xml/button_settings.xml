@@ -32,6 +32,18 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
+        android:key="navigation_bar_enable"
+        android:title="@string/navigation_bar_category">
+       
+        <PreferenceScreen    
+            android:id="@+id/navigation_settings"
+            android:title="@string/navbar_pref_title"
+            android:fragment="com.android.settings.axxion.NavigationSettings" >
+         </PreferenceScreen>              
+	
+	</PreferenceCategory>
+    
+    <PreferenceCategory
         android:key="button_volume_keys"
         android:title="@string/button_volume_keys_title" >
 

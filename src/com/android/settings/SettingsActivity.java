@@ -81,6 +81,7 @@ import com.android.settings.deviceinfo.Memory;
 import com.android.settings.deviceinfo.UsbSettings;
 import com.android.settings.fuelgauge.BatterySaverSettings;
 import com.android.settings.fuelgauge.PowerUsageSummary;
+import com.android.settings.axxion.NavigationSettings;
 import com.android.settings.notification.NotificationAppList;
 import com.android.settings.notification.OtherSoundSettings;
 import com.android.settings.quicklaunch.QuickLaunchSettings;
@@ -244,7 +245,8 @@ public class SettingsActivity extends Activity
             R.id.nfc_payment_settings,
             R.id.home_settings,
             R.id.button_settings,
-            R.id.dashboard
+            R.id.dashboard,
+            R.id.navigation_settings
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -311,7 +313,8 @@ public class SettingsActivity extends Activity
             ApnSettings.class.getName(),
             ButtonSettings.class.getName(),
             MainActivity.class.getName(),
-            BatteryLightSettings.class.getName()
+            BatteryLightSettings.class.getName(),
+	    NavigationSettings.class.getName()
     };
 
 
