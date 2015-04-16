@@ -118,6 +118,7 @@ import com.brewcrewfoo.performance.activities.MainActivity;
 import org.omnirom.omnigears.batterylight.BatteryLightSettings;
 import org.omnirom.omnigears.brightness.ButtonBrightnessSettings;
 import com.android.settings.axxion.NavBarSettings;
+import com.android.settings.axxion.AxxionSettings;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -225,6 +226,7 @@ public class SettingsActivity extends Activity
             R.id.data_usage_settings,
             R.id.sim_settings,
             R.id.wireless_settings,
+            R.id.personalization_section,
             R.id.device_section,
             R.id.interface_section,
             R.id.notification_settings,
@@ -247,7 +249,8 @@ public class SettingsActivity extends Activity
             R.id.home_settings,
             R.id.button_settings,
             R.id.dashboard,
-            R.id.navigation_settings
+            R.id.navigation_settings,
+            R.id.axxion_settings    
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -315,8 +318,13 @@ public class SettingsActivity extends Activity
             ButtonSettings.class.getName(),
             MainActivity.class.getName(),
             BatteryLightSettings.class.getName(),
+<<<<<<< HEAD
             ButtonBrightnessSettings.class.getName(),
 			NavBarSettings.class.getName()
+=======
+			NavigationSettings.class.getName(),
+	        AxxionSettings.class.getName()
+>>>>>>> dea3248... Settings: statusbar clock customization + initial interface + color
     };
 
 

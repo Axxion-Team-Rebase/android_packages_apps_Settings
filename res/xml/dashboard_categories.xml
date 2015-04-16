@@ -68,14 +68,20 @@
                 android:fragment="com.android.settings.WirelessSettings"
                 android:icon="@drawable/ic_settings_more"
                 />
-
     </dashboard-category>
 
     <!-- AXXION -->
     <dashboard-category
             android:id="@+id/interface_section"
             android:title="@string/header_category_interface" >
-
+   
+        <!-- Axxion Tweaks -->
+        <dashboard-tile
+                android:id="@+id/axxion_settings"
+                android:icon="@drawable/ic_settings_interface"
+                android:fragment="com.android.settings.axxion.AxxionSettings"
+                android:title="@string/axxion_settings_title" />
+                
         <!-- Buttons -->
         <dashboard-tile
                 android:id="@+id/button_settings"
