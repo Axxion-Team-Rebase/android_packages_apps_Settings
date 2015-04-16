@@ -25,7 +25,7 @@
 
         <PreferenceScreen
             android:key="navigation_bar"
-            android:title="@string/category_navbar"
+            android:title="@string/buttons_and_options_title"
             android:fragment="com.android.settings.axxion.navbar.NavbarTabHostFragment"
             android:dependency="navbar_force_enable" />
 

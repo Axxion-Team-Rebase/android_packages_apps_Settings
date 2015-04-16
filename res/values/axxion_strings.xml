@@ -54,13 +54,13 @@
     <string name="toggle_dream">Screensaver</string>
     <string name="toggle_dream_failed">Dreams are off or disabled</string>
 
-    <!-- Navigation -->
-    <string name="navigation_pref_title">Customize buttons and behavior</string>
 
     <!-- Navigation bar -->
-    <string name="navigation_bar_category">Navigation bar</string>
+    <string name="navigation_bar_category">Software Keys</string>
     <string name="navbar_force_enable_title">Turn on navigation bar</string>
     <string name="navbar_force_enable_summary">May require a reboot</string>
+    <string name="buttons_and_options_title">Customize buttons and behavior</string>
+    <string name="navbar_pref_title">Customize navigation bar</string>
 
     <!-- Custom navigation bar targets -->
     <string name="choose_action_double_tap_title">Choose double tap action</string>
@@ -114,4 +114,7 @@
     <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>  
     <string name="group_applications">Applications</string>
     <string name="select_custom_app_title">Select custom application</string>
+
+   <!-- Custom tabs --> 
+    <string name="bitsyko_layers">Layers</string>
 </resources>

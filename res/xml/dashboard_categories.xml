@@ -71,7 +71,7 @@
 
     </dashboard-category>
 
-    <!-- OMNI -->
+    <!-- AXXION -->
     <dashboard-category
             android:id="@+id/interface_section"
             android:title="@string/header_category_interface" >
@@ -79,9 +79,9 @@
         <!-- BitSyko Layers App -->
         <dashboard-tile
                 android:id="@+id/bitsyko_layers"
-                android:icon="@drawable/ic_bitsyko_layers"
                 android:title="@string/bitsyko_layers">
-                <intent
+                <!-- android:icon="@drawable/ic_bitsyko_layers" -->
+				<intent
                     android:action="android.intent.action.MAIN"
                     android:targetPackage="com.lovejoy777.rroandlayersmanager"
                     android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
@@ -90,8 +90,8 @@
         <!-- Kernel Auditor App -->
         <dashboard-tile
                 android:id="@+id/kernel_auditor"
-                android:icon="@drawable/ic_liquid_performance_teal"
                 android:title="@string/performance_settings">
+				<!--  android:icon="@drawable/ic_liquid_performance_teal" -->
                 <intent
                     android:action="android.intent.action.MAIN"
                     android:targetPackage="com.grarak.kerneladiutor"
