@@ -114,6 +114,7 @@ import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 
+import com.android.settings.axxion.AxxionSettings;
 import com.android.settings.ButtonSettings;
 import com.brewcrewfoo.performance.activities.MainActivity;
 import com.android.settings.batterylight.BatteryLightSettings;
@@ -224,6 +225,7 @@ public class SettingsActivity extends Activity
             R.id.data_usage_settings,
             R.id.sim_settings,
             R.id.wireless_settings,
+            R.id.personalization_section,
             R.id.device_section,
             R.id.interface_section,
             R.id.notification_settings,
@@ -246,7 +248,8 @@ public class SettingsActivity extends Activity
             R.id.home_settings,
             R.id.button_settings,
             R.id.dashboard,
-            R.id.navigation_settings
+            R.id.navigation_settings,
+            R.id.axxion_settings    
     };
 
     private static final String[] ENTRY_FRAGMENTS = {
@@ -314,7 +317,8 @@ public class SettingsActivity extends Activity
             ButtonSettings.class.getName(),
             MainActivity.class.getName(),
             BatteryLightSettings.class.getName(),
-	    NavigationSettings.class.getName()
+			NavigationSettings.class.getName(),
+	        AxxionSettings.class.getName()
     };
 
 
