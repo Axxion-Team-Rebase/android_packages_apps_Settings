@@ -134,14 +134,14 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(DisplaySettings.class.getName()),
                         NO_DATA_RES_ID,
                         DisplaySettings.class.getName(),
-                        R.drawable.ic_settings_display));
+                        R.drawable.ic_settings_display_exposed));
 
         sResMap.put(WallpaperTypeSettings.class.getName(),
                 new SearchIndexableResource(
                         Ranking.getRankForClassName(WallpaperTypeSettings.class.getName()),
                         NO_DATA_RES_ID,
                         WallpaperTypeSettings.class.getName(),
-                        R.drawable.ic_settings_display));
+                        R.drawable.ic_settings_display_exposed));
 
         sResMap.put(NotificationSettings.class.getName(),
                 new SearchIndexableResource(
@@ -282,7 +282,7 @@ public final class SearchIndexableResources {
                         Ranking.getRankForClassName(AmbientSettings.class.getName()),
                         NO_DATA_RES_ID,
                         AmbientSettings.class.getName(),
-                        R.drawable.ic_settings_display));
+                        R.drawable.ic_settings_display_exposed));
 
         sResMap.put(ButtonSettings.class.getName(),
                 new SearchIndexableResource(

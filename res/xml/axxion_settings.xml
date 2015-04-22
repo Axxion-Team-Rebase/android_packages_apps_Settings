@@ -54,7 +54,7 @@
 			android:key="heads_up_enabled"
 			android:fragment="com.android.settings.axxion.HeadsUpSettings"
 			android:title="@string/category_heads_up"
-			android:icon="@drawable/ic_headsup" />
+			android:icon="@drawable/ic_headsup_exposed" />
 
     </PreferenceCategory>
     
