@@ -359,4 +359,17 @@
     <string name="led_color_green">Green</string>
     <string name="led_color_red">Red</string>
     <string name="led_color_blue">Blue</string>
+
+    <!-- Button backlight -->    
+    <string name="button_brightness_title">Brightness</string>
+	<string name="button_brightness_summary">Button backlight brightness</string>
+    <string name="button_timeout_title">Backlight timeout</string>
+    <string name="button_timeout_summary">Disabled on value 0</string>
+    <string name="button_no_brightness">Dark mode</string>
+    <string name="button_no_brightness_summary">Don\'t set button brightness</string>
+    <string name="button_link_brightness">Link to screen</string>
+    <string name="button_link_brightness_summary">Use screen brightness level</string>
+    <string name="button_manual_brightness">Brightness level</string>
+    <string name="dialog_manual_brightness_title">Brightness level</string>
+    <string name="unit_sec">sec</string>    
 </resources>

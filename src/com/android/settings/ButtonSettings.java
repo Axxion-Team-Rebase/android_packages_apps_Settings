@@ -104,7 +104,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 
 //    private static final String VIRTUAL_KEY_HAPTIC_FEEDBACK = "virtual_key_haptic_feedback";
 //    private static final String FORCE_SHOW_OVERFLOW_MENU = "force_show_overflow_menu";
-//    private static final String KEYS_BRIGHTNESS_KEY = "button_brightness";
+    private static final String KEYS_BRIGHTNESS_KEY = "button_brightness";
 //    private static final String KEYS_SHOW_NAVBAR_KEY = "navigation_bar_show";
 //    private static final String KEYS_DISABLE_HW_KEY = "hardware_keys_disable";
 
@@ -155,7 +155,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 //    private CheckBoxPreference mHeadsetHookLaunchVoice;
 //    private CheckBoxPreference mVirtualKeyHapticFeedback;
 //    private CheckBoxPreference mForceShowOverflowMenu;
-//    private boolean mButtonBrightnessSupport;
+    private boolean mButtonBrightnessSupport;
 //    private CheckBoxPreference mEnableNavBar;
 //    private CheckBoxPreference mDisabkeHWKeys;
     private PreferenceScreen mButtonBrightness;
@@ -180,7 +180,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
         final PreferenceCategory volumeCategory =
                 (PreferenceCategory) prefScreen.findPreference(CATEGORY_VOLUME);
 
-//        mButtonBrightnessSupport = getResources().getBoolean(com.android.internal.R.bool.config_button_brightness_support);
+        mButtonBrightnessSupport = getResources().getBoolean(com.android.internal.R.bool.config_button_brightness_support);
 
         if (hasVolumeRocker()) {
             mVolumeWake = (CheckBoxPreference) findPreference(BUTTON_VOLUME_WAKE);
@@ -282,8 +282,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 //                    KEYS_SHOW_NAVBAR_KEY);
 //            mDisabkeHWKeys = (CheckBoxPreference) prefScreen.findPreference(
 //                    KEYS_DISABLE_HW_KEY);
-//            mButtonBrightness = (PreferenceScreen) prefScreen.findPreference(
-//                    KEYS_BRIGHTNESS_KEY);
+            mButtonBrightness = (PreferenceScreen) prefScreen.findPreference(
+                    KEYS_BRIGHTNESS_KEY);
 
             if (hasBackKey) {
                 int backPressAction = Settings.System.getInt(resolver,
@@ -474,9 +474,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements OnPref
 //                        Settings.System.HARDWARE_KEYS_DISABLE, 0) == 1;
 //            mDisabkeHWKeys.setChecked(harwareKeysDisable);
 //
-//            if (!mButtonBrightnessSupport) {
-//                keysCategory.removePreference(mButtonBrightness);
-//            }
+            if (!mButtonBrightnessSupport) {
+                keysCategory.removePreference(mButtonBrightness);
+            }
 //            updateDisableHWKeyEnablement(harwareKeysDisable);
         }
 

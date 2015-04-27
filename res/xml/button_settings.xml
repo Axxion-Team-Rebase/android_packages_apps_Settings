@@ -88,11 +88,17 @@
     <PreferenceCategory
         android:key="button_keys"
         android:title="@string/button_keys_title" >
-
+       
         <SwitchPreference
             android:key="keys_enable_custom"
             android:title="@string/keys_enable_custom_title"
             android:persistent="false" />
+      
+        <PreferenceScreen
+            android:key="button_brightness"
+            android:title="@string/button_brightness_title"
+            android:summary="@string/button_brightness_summary"
+            android:fragment="com.android.settings.brightness.ButtonBrightnessSettings" />
             
     </PreferenceCategory>
 
