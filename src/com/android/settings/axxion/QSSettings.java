@@ -17,6 +17,7 @@ package com.android.settings.axxion;
 
 import android.os.Bundle;
 import android.preference.Preference;
+import android.preference.ListPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -24,7 +25,13 @@ import com.android.settings.axxion.qs.QSTiles;
 
 public class NotificationDrawerSettings extends SettingsPreferenceFragment {
     private Preference mQSTiles;
-
+  
+   // status bar power menu
+   private ListPreference mStatusBarPowerMenu;
+  
+   // status bar power menu
+   private static final String STATUS_BAR_POWER_MENU = "status_bar_power_menu";
+   
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
