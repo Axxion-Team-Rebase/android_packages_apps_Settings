@@ -50,9 +50,10 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 
-import org.omnirom.omnigears.AmbientSettings;
-import org.omnirom.omnigears.ButtonSettings;
-import org.omnirom.omnigears.batterylight.BatteryLightSettings;
+import com.android.settings.AmbientSettings;
+import com.android.settings.ButtonSettings;
+import com.android.settings.batterylight.BatteryLightSettings;
+import com.android.settings.brightness.ButtonBrightnessSettings;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -297,6 +298,12 @@ public final class SearchIndexableResources {
                         BatteryLightSettings.class.getName(),
                         R.drawable.ic_settings_notifications));
 
+        sResMap.put(ButtonBrightnessSettings.class.getName(),
+                new SearchIndexableResource(
+                        Ranking.getRankForClassName(ButtonBrightnessSettings.class.getName()),
+                        NO_DATA_RES_ID,
+                        ButtonBrightnessSettings.class.getName(),
+                        R.drawable.ic_buttons));
     }
 
     private SearchIndexableResources() {

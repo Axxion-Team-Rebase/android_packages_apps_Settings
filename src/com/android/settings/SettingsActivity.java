@@ -114,12 +114,13 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
-import com.android.settings.terminus.qs.QSTiles;
+import com.android.settings.axxion.qs.QSTiles;
 
 import com.android.settings.axxion.AxxionSettings;
 import com.android.settings.ButtonSettings;
 import com.brewcrewfoo.performance.activities.MainActivity;
 import com.android.settings.batterylight.BatteryLightSettings;
+import com.android.settings.brightness.ButtonBrightnessSettings;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -320,12 +321,9 @@ public class SettingsActivity extends Activity
             MainActivity.class.getName(),
             BatteryLightSettings.class.getName(),
 			NavigationSettings.class.getName(),
-<<<<<<< HEAD
 	        AxxionSettings.class.getName()
-=======
-            InterfaceSettings.class.getName()
 			QSTiles.class.getName(),
->>>>>>> 31921ae... Customizeable QS Tiles (2/2) Squashed
+            ButtonBrightnessSettings.class.getName()
     };
 
 
