@@ -59,7 +59,7 @@
     <!-- Navigation bar -->
     <string name="navigation_bar_category">Software Keys</string>
     <string name="navbar_force_enable_title">Turn on navigation bar</string>
-    <string name="navbar_force_enable_summary">May require a reboot</string>
+    <string name="navbar_force_enable_summary">WARNING: For devices with on-screen navigation bar, this enables navbar customizations. For devices with hardware navigation keys, it may require a reboot</string>
     <string name="buttons_and_options_title">Customize buttons and behavior</string>
     <string name="navbar_pref_title">Customize navigation bar</string>
 
@@ -102,8 +102,7 @@
     <string name="editor_instructions">Rearrange by dragging by the handle on the right. Remove by swiping.</string>
     <string name="save">Save</string>
     <string name="navigation_bar_longpress_timeout_text">Button longpress delay</string>
-    <string name="enable_navigation_ring_title">Navigation ring</string>
-    <string name="enable_navigation_ring_summary">Enable long-press on home for the google now search assistant</string>
+    <string name="navigation_ring_title">Navigation ring</string>
     <string name="navbar_use_gallary_warning">Info: please select Gallery to save image</string>
 
     <!-- Navigation Bar left-handed mode -->
@@ -445,6 +444,9 @@
     <string name="recents_clear_all_location_left">Top left</string>
     
     <!-- NavRing edit mode -->
+    <string name="navigation_ring_enable_title">Enable navigation ring panel</string>    
+    <string name="navigation_ring_settings_title">Custom navring targets</string>
+    <string name="navigation_ring_settings_summary">Change and set up to 3 custom app/actions of the search panel</string>    
     <string name="navigation_bar_help_text">To get started tap the edit icon to unlock the navigation ring for editing.\n\nYou can tap an icon to change its shortcut, or long press an icon to re-arrange the layout.\n\nTap \'Save\' to commit your changes, or \'Restore defaults\' to reset the layout to default settings.</string>
     <string name="navigation_restore_button_text">Restore\ndefaults</string>
     <string name="navigation_edit_button_text">Edit</string>
