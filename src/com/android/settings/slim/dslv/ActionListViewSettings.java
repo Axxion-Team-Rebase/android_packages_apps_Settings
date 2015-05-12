@@ -680,9 +680,9 @@ public class ActionListViewSettings extends ListFragment implements
                 case DLG_RESET_TO_DEFAULT:
                     return new AlertDialog.Builder(getActivity())
                     .setTitle(R.string.shortcut_action_reset)
-                    .setMessage(R.string.reset_message)
+                    .setMessage(R.string.ic_settings_reset)
                     .setNegativeButton(R.string.cancel, null)
-                    .setPositiveButton(R.string.dlg_ok,
+                    .setPositiveButton(R.string.ok,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             // first delete custom icons in case they exist

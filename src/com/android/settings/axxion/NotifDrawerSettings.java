@@ -41,12 +41,10 @@ public class NotifDrawerSettings extends SettingsPreferenceFragment
             implements OnPreferenceChangeListener  {
 
     public static final String TAG = "QsSettings";
-
-    private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
-
+    private static final String QUICK_PULLDOWN = "quick_pulldown";
     private static final String STATUS_BAR_POWER_MENU = "status_bar_power_menu";
 
-    ListPreference mQuickPulldown;
+    private ListPreference mQuickPulldown;
 
     // status bar power menu
     private ListPreference mStatusBarPowerMenu;
@@ -58,19 +56,14 @@ public class NotifDrawerSettings extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.qs_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
-
+      
+        // Quick Pulldown
         mQuickPulldown = (ListPreference) findPreference(PRE_QUICK_PULLDOWN);
-        if (!DeviceUtils.isPhone(getActivity())) {
-            prefs.removePreference(mQuickPulldown);
-        } else {
-            // Quick Pulldown
             mQuickPulldown.setOnPreferenceChangeListener(this);
             int statusQuickPulldown = Settings.System.getInt(getContentResolver(),
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 1);
             mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
             updateQuickPulldownSummary(statusQuickPulldown);
-        }
-        
         // status bar power menu
         mStatusBarPowerMenu = (ListPreference) findPreference(STATUS_BAR_POWER_MENU);
         mStatusBarPowerMenu.setOnPreferenceChangeListener(this);

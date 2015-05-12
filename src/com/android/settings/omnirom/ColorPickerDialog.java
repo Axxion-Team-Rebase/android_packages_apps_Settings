@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.batterylight;
+package com.android.settings.omnirom;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -51,11 +51,11 @@ import java.util.ArrayList;
 import java.util.IllegalFormatException;
 import java.util.Locale;
 
-public class BatteryLightDialog extends AlertDialog implements
+public class ColorPickerDialog extends AlertDialog implements
         ColorPickerView.OnColorChangedListener, TextWatcher, OnFocusChangeListener {
 
-    private static final String TAG = "BatteryLightDialog";
-    private final static String STATE_KEY_COLOR = "BatteryLightDialog:color";
+    private static final String TAG = "ColorPickerDialog";
+    private final static String STATE_KEY_COLOR = "ColorPickerDialog:color";
 
     private ColorPickerView mColorPicker;
 
@@ -63,16 +63,11 @@ public class BatteryLightDialog extends AlertDialog implements
     private ColorPanelView mNewColor;
     private LayoutInflater mInflater;
     private boolean mMultiColor = true;
-    private Spinner mColorList;
-    private LinearLayout mColorListView;
     private LinearLayout mColorPanelView;
-    private ColorPanelView mNewListColor;
-    private LedColorAdapter mLedColorAdapter;
 
-    protected BatteryLightDialog(Context context, int initialColor) {
+    public ColorPickerDialog(Context context, int initialColor) {
         super(context);
 
-        mMultiColor = getContext().getResources().getBoolean(R.bool.config_has_multi_color_led);
         init(initialColor);
     }
 
@@ -93,57 +88,25 @@ public class BatteryLightDialog extends AlertDialog implements
     private void setUp(int color) {
         mInflater = (LayoutInflater) getContext()
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View layout = mInflater.inflate(R.layout.dialog_battery_settings, null);
+        View layout = mInflater.inflate(R.layout.dialog_color_picker, null);
 
         mColorPicker = (ColorPickerView) layout.findViewById(R.id.color_picker_view);
         mHexColorInput = (EditText) layout.findViewById(R.id.hex_color_input);
         mNewColor = (ColorPanelView) layout.findViewById(R.id.color_panel);
         mColorPanelView = (LinearLayout) layout.findViewById(R.id.color_panel_view);
 
-        mColorListView = (LinearLayout) layout.findViewById(R.id.color_list_view);
-        mColorList = (Spinner) layout.findViewById(R.id.color_list_spinner);
-        mNewListColor = (ColorPanelView) layout.findViewById(R.id.color_list_panel);
-
+        setAlphaSliderVisible(true);
         mColorPicker.setOnColorChangedListener(this);
         mColorPicker.setColor(color, true);
 
         mHexColorInput.setOnFocusChangeListener(this);
 
-        mColorList = (Spinner) layout.findViewById(R.id.color_list_spinner);
-        mLedColorAdapter = new LedColorAdapter(
-                R.array.entries_led_colors,
-                R.array.values_led_colors);
-        mColorList.setAdapter(mLedColorAdapter);
-        mColorList.setSelection(mLedColorAdapter.getColorPosition(color));
-        mColorList.setOnItemSelectedListener(mColorListListener);
-
         setView(layout);
-        setTitle(R.string.edit_battery_settings);
+        setTitle(R.string.color_picker_dialog_title);
 
-        // show and hide the correct UI depending if we have multi-color led or not
-        if (mMultiColor){
-            mColorListView.setVisibility(View.GONE);
-            mColorPicker.setVisibility(View.VISIBLE);
-            mColorPanelView.setVisibility(View.VISIBLE);
-        } else {
-            mColorListView.setVisibility(View.VISIBLE);
-            mColorPicker.setVisibility(View.GONE);
-            mColorPanelView.setVisibility(View.GONE);
-        }
+        mColorPicker.setVisibility(View.VISIBLE);
+        mColorPanelView.setVisibility(View.VISIBLE);
     }
-
-    private AdapterView.OnItemSelectedListener mColorListListener = new AdapterView.OnItemSelectedListener() {
-
-        @Override
-        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            int color = mLedColorAdapter.getColor(position);
-            mNewListColor.setColor(color);
-        }
-
-        @Override
-        public void onNothingSelected(AdapterView<?> parent) {
-        }
-    };
 
     @Override
     public Bundle onSaveInstanceState() {
@@ -174,82 +137,7 @@ public class BatteryLightDialog extends AlertDialog implements
     }
 
     public int getColor() {
-        if (mMultiColor){
-            return mColorPicker.getColor();
-        } else {
-            return mNewListColor.getColor();
-        }
-    }
-
-    class LedColorAdapter extends BaseAdapter implements SpinnerAdapter {
-        private ArrayList<Pair<String, Integer>> mColors;
-
-        public LedColorAdapter(int ledColorResource, int ledValueResource) {
-            mColors = new ArrayList<Pair<String, Integer>>();
-
-            String[] color_names = getContext().getResources().getStringArray(ledColorResource);
-            String[] color_values = getContext().getResources().getStringArray(ledValueResource);
-
-            for(int i = 0; i < color_values.length; ++i) {
-                try {
-                    int color = Color.parseColor(color_values[i]);
-                    mColors.add(new Pair<String, Integer>(color_names[i], color));
-                } catch (IllegalArgumentException ex) {
-                    // Number format is incorrect, ignore entry
-                }
-            }
-        }
-
-        /**
-         * Will return the position of the spinner entry with the specified
-         * color. Returns 0 if there is no such entry.
-         */
-        public int getColorPosition(int color) {
-            for (int position = 0; position < getCount(); ++position) {
-                if (getItem(position).second.equals(color)) {
-                    return position;
-                }
-            }
-
-            return 0;
-        }
-
-        public int getColor(int position) {
-            Pair<String, Integer> item = getItem(position);
-            if (item != null){
-                return item.second;
-            }
-
-            // -1 is white
-            return -1;
-        }
-
-        @Override
-        public int getCount() {
-            return mColors.size();
-        }
-
-        @Override
-        public Pair<String, Integer> getItem(int position) {
-            return mColors.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View view, ViewGroup parent) {
-            if (view == null) {
-                view = mInflater.inflate(R.layout.led_color_item, null);
-            }
-
-            Pair<String, Integer> entry = getItem(position);
-            ((TextView) view.findViewById(R.id.textViewName)).setText(entry.first);
-
-            return view;
-        }
+        return mColorPicker.getColor();
     }
 
     @Override
