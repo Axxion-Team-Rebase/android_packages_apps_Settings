@@ -89,8 +89,8 @@ public class BatteryLightPreference extends Preference implements DialogInterfac
     }
 
     private void updatePreferenceViews() {
-        final int width = (int) mResources.getDimension(R.dimen.color_preference_width);
-        final int height = (int) mResources.getDimension(R.dimen.color_preference_height);
+        final int width = (int) mResources.getDimension(R.dimen.activity_horizontal_margin);
+        final int height = (int) mResources.getDimension(R.dimen.activity_vertical_margin);
 
         if (mLightColorView != null) {
             mLightColorView.setEnabled(true);

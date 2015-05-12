@@ -18,7 +18,6 @@ package com.android.settings;
 
 import com.android.settings.applications.AppOpsSummary;
 import com.android.settings.ButtonSettings;
-import com.brewcrewfoo.performance.activities.MainActivity;
 import com.android.settings.batterylight.BatteryLightSettings;
 import com.android.settings.axxion.qs.QSTiles;
 import com.android.settings.brightness.ButtonBrightnessSettings;

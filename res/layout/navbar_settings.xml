@@ -247,36 +247,6 @@
                 android:paddingBottom="1dp"
                 android:background="@android:color/darker_gray"/>
 
-            <LinearLayout
-                android:id="@+id/alternate_layouts"
-                style="@style/settingsFragmentStyle"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:clickable="true" >
-
-                <Switch
-                    android:id="@+id/enable_navigation_ring"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:textSize="12sp"
-                    android:text="@string/enable_navigation_ring_title" />
-
-                <TextView
-                    android:id="@+id/enable_navigation_ring_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:textSize="12sp"
-                    android:text="@string/enable_navigation_ring_summary" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:paddingBottom="1dp"
-                android:background="@android:color/darker_gray"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

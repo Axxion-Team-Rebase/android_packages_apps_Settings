@@ -215,7 +215,7 @@ public class StatusBarBatteryStatusSettings extends SettingsPreferenceFragment i
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.add(0, MENU_RESET, 0, R.string.reset)
-                .setIcon(R.drawable.ic_menu_reset) // use the KitKat backup icon
+                .setIcon(R.drawable.ic_settings_reset)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
 
@@ -327,10 +327,10 @@ public class StatusBarBatteryStatusSettings extends SettingsPreferenceFragment i
             switch (id) {
                 case DLG_RESET:
                     return new AlertDialog.Builder(getActivity())
-                    .setTitle(R.string.reset)
-                    .setMessage(R.string.dlg_reset_values_message)
+                    .setTitle(R.string.ic_settings_reset)
+                    .setMessage(R.string.reset_option_message)
                     .setNegativeButton(R.string.cancel, null)
-                    .setNeutralButton(R.string.dlg_reset_android,
+                    .setNeutralButton(R.string.reset_android,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             Settings.System.putInt(getOwner().mResolver,
@@ -354,7 +354,7 @@ public class StatusBarBatteryStatusSettings extends SettingsPreferenceFragment i
                             getOwner().refreshSettings();
                         }
                     })
-                    .setPositiveButton(R.string.dlg_reset_darkkat,
+                    .setPositiveButton(R.string.reset_axxion,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                              Settings.System.putInt(getOwner().mResolver,

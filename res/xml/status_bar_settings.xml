@@ -41,13 +41,14 @@
 			android:title="@string/status_bar_expanded_header_settings_title" />
         
     <PreferenceCategory
-            android:title="@string/status_bar_options_title" />
+            android:title="@string/status_bar_options_title">
 
     <com.android.settings.preference.SystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
             android:title="@string/double_tap_to_sleep_title"
             android:summary="@string/double_tap_to_sleep_summary"
             android:defaultValue="true" />
+            
     </PreferenceCategory>
 
 </PreferenceScreen>

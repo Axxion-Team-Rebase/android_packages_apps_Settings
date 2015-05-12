@@ -56,7 +56,7 @@ public class OmniSwitch extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.aicp_omniswitch);
+        addPreferencesFromResource(R.xml.omniswitch);
 
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();

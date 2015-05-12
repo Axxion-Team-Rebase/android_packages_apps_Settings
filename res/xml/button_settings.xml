@@ -54,6 +54,8 @@
             android:fragment="com.android.settings.axxion.navbar.NavbarTabHostFragment"
             android:dependency="navbar_force_enable" />       
 
+	</PreferenceCategory>
+
     <PreferenceCategory
         android:key="navigation_ring"
         android:title="@string/navigation_ring_title">

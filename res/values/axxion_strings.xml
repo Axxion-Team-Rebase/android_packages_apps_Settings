@@ -18,6 +18,7 @@
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
     <string name="reset_android">Android</string>
     <string name="attention">Attention</string>
     <string name="enabled">Enabled</string>
@@ -31,8 +32,9 @@
     <string name="category_colors_title">Customize colors</string>
     <string name="icons_title">Icons</string>
     <string name="text_title">Text</string>
-    <string name="reset_message">Reset all entries to default?</string>
-    <string name="reset_option_message">Reset values to\nAndroid- or Fusion default?</string>
+    <string name="ic_settings_reset">Reset all entries to default?</string>
+    <string name="reset_axxion">Axxion</string>
+    <string name="reset_option_message">Reset values to\nAndroid- or Axxion default?</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -399,7 +401,7 @@
     
     <!-- Status bar battery status settings -->
     <string name="status_bar_battery_status_settings_title">Battery status</string>
-    <string name="status_bar_battery_status_settings_summary">Customize the battery icon</string    
+    <string name="status_bar_battery_status_settings_summary">Customize the battery icon</string>  
     <string name="battery_status_cat_circle_options_title">Customize the circle</string>
     <string name="battery_status_style_title">Indicator</string>
     <string name="battery_status_style_icon_portrait">Icon portrait</string>
@@ -447,8 +449,13 @@
     <string name="navigation_ring_enable_title">Enable navigation ring panel</string>    
     <string name="navigation_ring_settings_title">Custom navring targets</string>
     <string name="navigation_ring_settings_summary">Change and set up to 3 custom app/actions of the search panel</string>    
-    <string name="navigation_bar_help_text">To get started tap the edit icon to unlock the navigation ring for editing.\n\nYou can tap an icon to change its shortcut, or long press an icon to re-arrange the layout.\n\nTap \'Save\' to commit your changes, or \'Restore defaults\' to reset the layout to default settings.</string>
+    <string name="navigation_ring_message">Tap the edit icon to open the navigation ring for editing.\n\nSelect a target to configure its behavior.\n\nTap the \'\u2713\' icon to save your changes, or \'Restore defaults\' to reset the settings to defaults.</string>
     <string name="navigation_restore_button_text">Restore\ndefaults</string>
     <string name="navigation_edit_button_text">Edit</string>
     <string name="navigation_save_button_text">Save</string>
+    <string name="navigation_bar_reset_message">Delete current settings and restore the default layout?</string>    
+    
+    <!-- Needed for cm lockscreen shortcuts-->
+    <string name="profile_applist_title">Apps</string>    
+    <string name="picker_activities">Activities</string>    
 </resources>

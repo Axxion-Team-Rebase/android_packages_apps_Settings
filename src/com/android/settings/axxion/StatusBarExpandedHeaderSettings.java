@@ -38,10 +38,6 @@ import net.margaritov.preference.colorpicker.ColorPickerPreference;
 public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-    private static final String PREF_SHOW_WEATHER =
-            "expanded_header_show_weather";
-    private static final String PREF_SHOW_LOCATION =
-            "expanded_header_show_weather_location";
     private static final String PREF_TEXT_COLOR =
             "expanded_header_text_color";
     private static final String PREF_ICON_COLOR =
@@ -52,8 +48,6 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DLG_RESET = 0;
 
-    private CheckBoxPreference mShowWeather;
-    private CheckBoxPreference mShowLocation;
     private ColorPickerPreference mTextColor;
     private ColorPickerPreference mIconColor;
 
@@ -74,26 +68,8 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
         addPreferencesFromResource(R.xml.status_bar_expanded_header_settings);
         mResolver = getActivity().getContentResolver();
 
-        boolean showWeather = Settings.System.getInt(mResolver,
-                Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER, 0) == 1;
-
         int intColor;
         String hexColor;
-
-        mShowWeather =
-                (CheckBoxPreference) findPreference(PREF_SHOW_WEATHER);
-        mShowWeather.setChecked(showWeather);
-        mShowWeather.setOnPreferenceChangeListener(this);
-
-        if (showWeather) {
-            mShowLocation =
-                    (CheckBoxPreference) findPreference(PREF_SHOW_LOCATION);
-            mShowLocation.setChecked(Settings.System.getInt(mResolver,
-                    Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER_LOCATION, 1) == 1);
-            mShowLocation.setOnPreferenceChangeListener(this);
-        } else {
-            removePreference(PREF_SHOW_LOCATION);
-        }
 
         mTextColor =
                 (ColorPickerPreference) findPreference(PREF_TEXT_COLOR);
@@ -141,20 +117,7 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
         String hex;
         int intHex;
 
-        if (preference == mShowWeather) {
-            value = (Boolean) newValue;
-            Settings.System.putInt(mResolver,
-                Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER,
-                value ? 1 : 0);
-            refreshSettings();
-            return true;
-        } else if (preference == mShowLocation) {
-            value = (Boolean) newValue;
-            Settings.System.putInt(mResolver,
-                Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER_LOCATION,
-                value ? 1 : 0);
-            return true;
-        } else if (preference == mTextColor) {
+        if (preference == mTextColor) {
             hex = ColorPickerPreference.convertToARGB(
                 Integer.valueOf(String.valueOf(newValue)));
             intHex = ColorPickerPreference.convertToColorInt(hex);
@@ -200,16 +163,12 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
             switch (id) {
                 case DLG_RESET:
                     return new AlertDialog.Builder(getActivity())
-                    .setTitle(R.string.reset)
-                    .setMessage(R.string.dlg_reset_values_message)
+                    .setTitle(R.string.ic_settings_reset)
+                    .setMessage(R.string.reset_option_message)
                     .setNegativeButton(R.string.cancel, null)
-                    .setNeutralButton(R.string.dlg_reset_android,
+                    .setNeutralButton(R.string.reset_android,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER, 0);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER_LOCATION, 1);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_EXPANDED_HEADER_TEXT_COLOR,
                                     DEFAULT_COLOR);
@@ -219,13 +178,9 @@ public class StatusBarExpandedHeaderSettings extends SettingsPreferenceFragment 
                             getOwner().refreshSettings();
                         }
                     })
-                    .setPositiveButton(R.string.dlg_reset_darkkat,
+                    .setPositiveButton(R.string.reset_axxion,
                         new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER, 1);
-                            Settings.System.putInt(getOwner().mResolver,
-                                    Settings.System.STATUS_BAR_EXPANDED_HEADER_SHOW_WEATHER_LOCATION, 1);
                             Settings.System.putInt(getOwner().mResolver,
                                     Settings.System.STATUS_BAR_EXPANDED_HEADER_TEXT_COLOR,
                                     0xffff0000);

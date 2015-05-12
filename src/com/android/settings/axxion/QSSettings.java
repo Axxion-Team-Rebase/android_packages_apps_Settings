@@ -23,7 +23,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.axxion.qs.QSTiles;
 
-public class NotificationDrawerSettings extends SettingsPreferenceFragment {
+public class QSSettings extends SettingsPreferenceFragment {
     private Preference mQSTiles;
   
     @Override

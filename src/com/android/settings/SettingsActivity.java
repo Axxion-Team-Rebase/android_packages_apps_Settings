@@ -82,7 +82,6 @@ import com.android.settings.deviceinfo.Memory;
 import com.android.settings.deviceinfo.UsbSettings;
 import com.android.settings.fuelgauge.BatterySaverSettings;
 import com.android.settings.fuelgauge.PowerUsageSummary;
-import com.android.settings.axxion.NavigationSettings;
 import com.android.settings.notification.NotificationAppList;
 import com.android.settings.notification.OtherSoundSettings;
 import com.android.settings.quicklaunch.QuickLaunchSettings;
@@ -118,7 +117,6 @@ import com.android.settings.axxion.qs.QSTiles;
 
 import com.android.settings.axxion.AxxionSettings;
 import com.android.settings.ButtonSettings;
-import com.brewcrewfoo.performance.activities.MainActivity;
 import com.android.settings.batterylight.BatteryLightSettings;
 import com.android.settings.brightness.ButtonBrightnessSettings;
 
@@ -251,7 +249,6 @@ public class SettingsActivity extends Activity
             R.id.home_settings,
             R.id.button_settings,
             R.id.dashboard,
-            R.id.navigation_settings,
             R.id.axxion_settings    
     };
 
@@ -318,10 +315,8 @@ public class SettingsActivity extends Activity
             QuickLaunchSettings.class.getName(),
             ApnSettings.class.getName(),
             ButtonSettings.class.getName(),
-            MainActivity.class.getName(),
             BatteryLightSettings.class.getName(),
-			NavigationSettings.class.getName(),
-	        AxxionSettings.class.getName()
+	        AxxionSettings.class.getName(),
 			QSTiles.class.getName(),
             ButtonBrightnessSettings.class.getName()
     };
@@ -1249,6 +1244,7 @@ public class SettingsActivity extends Activity
                     if (!supported) {
                         removeTile = true;
                     }
+                }
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
                         && !ArrayUtils.contains(SETTINGS_FOR_RESTRICTED, id)) {
                     removeTile = true;
