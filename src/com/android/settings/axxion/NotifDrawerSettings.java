@@ -53,12 +53,12 @@ public class NotifDrawerSettings extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.qs_settings);
+        addPreferencesFromResource(R.xml.notif_drawer_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
       
         // Quick Pulldown
-        mQuickPulldown = (ListPreference) findPreference(PRE_QUICK_PULLDOWN);
+        mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
             mQuickPulldown.setOnPreferenceChangeListener(this);
             int statusQuickPulldown = Settings.System.getInt(getContentResolver(),
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 1);

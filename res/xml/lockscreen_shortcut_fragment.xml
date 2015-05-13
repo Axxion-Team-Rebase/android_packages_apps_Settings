@@ -16,7 +16,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <SwitchPreference
+        <com.android.settings.preference.SystemSettingSwitchPreference
         android:key="lockscreen_shortcuts_longpress"
         android:title="@string/lockscreen_shorcuts_longpress_title"
         android:summary="@string/lockscreen_shorcuts_longpress_summary" />

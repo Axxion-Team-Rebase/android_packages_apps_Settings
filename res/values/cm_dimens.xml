@@ -26,4 +26,6 @@
     <dimen name="phone_height">420dp</dimen>
 
     <dimen name="fab_line_width">2dp</dimen>
+    
+    <dimen name="qs_tile_max_size">120dp</dimen>
 </resources>
