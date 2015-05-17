@@ -110,8 +110,8 @@
                 android:title="@string/firmware_version"
                 android:summary="@string/device_info_default"/>
 
-        <!-- Mod version -->
-        <Preference android:key="mod_version"
+        <!-- Axxion version -->
+        <Preference android:key="axxion_version"
                 style="?android:preferenceInformationStyle"
                 android:title="@string/mod_version"
                 android:summary="@string/mod_version_default" />

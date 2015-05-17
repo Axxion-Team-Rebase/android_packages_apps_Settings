@@ -80,7 +80,7 @@
                 android:id="@+id/axxion_settings"
                 android:icon="@drawable/ic_settings_interface"
                 android:fragment="com.android.settings.axxion.AxxionSettings"
-                android:title="@string/axxion_settings_title" />
+                android:title="@string/axxion_settings_title" />       
                 
         <!-- Buttons -->
         <dashboard-tile
