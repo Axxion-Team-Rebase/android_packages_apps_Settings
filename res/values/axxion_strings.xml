@@ -112,4 +112,7 @@
     <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>  
     <string name="group_applications">Applications</string>
     <string name="select_custom_app_title">Select custom application</string>
+    
+	<!-- Custom tabs --> 
+    <string name="bitsyko_layers">Layers</string>    
 </resources>
