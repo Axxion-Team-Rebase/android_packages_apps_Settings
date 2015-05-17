@@ -387,6 +387,7 @@
     <string name="status_bar_power_menu_action_dialog">Power menu - Screen off</string>    
     
     <!-- OmniSwitch -->
+    
     <string name="omniswitch_category">OmniSwitch</string>
     <string name="recents_use_omniswitch_title">Use for recents</string>
     <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of default recents view</string>
