@@ -12,7 +12,7 @@
         android:layout_margin="8dip"
         android:layout_gravity="center"
         android:layout_weight="0.2"
-        android:text="@string/navigation_bar_help_text"
+        android:text="@string/navigation_ring_help_text"
         android:textSize="14sp" />
     <LinearLayout
         android:layout_weight="0.8"
