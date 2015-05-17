@@ -44,7 +44,12 @@ public class NotifDrawerSettings extends SettingsPreferenceFragment
 
     private static final String PRE_QUICK_PULLDOWN = "quick_pulldown";
 
+    private static final String STATUS_BAR_POWER_MENU = "status_bar_power_menu";
+
     ListPreference mQuickPulldown;
+
+    // status bar power menu
+    private ListPreference mStatusBarPowerMenu;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +70,14 @@ public class NotifDrawerSettings extends SettingsPreferenceFragment
             mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
             updateQuickPulldownSummary(statusQuickPulldown);
         }
+        
+        // status bar power menu
+        mStatusBarPowerMenu = (ListPreference) findPreference(STATUS_BAR_POWER_MENU);
+        mStatusBarPowerMenu.setOnPreferenceChangeListener(this);
+        int statusBarPowerMenu = Settings.System.getInt(getContentResolver(),
+                STATUS_BAR_POWER_MENU, 0);
+        mStatusBarPowerMenu.setValue(String.valueOf(statusBarPowerMenu));
+        mStatusBarPowerMenu.setSummary(mStatusBarPowerMenu.getEntry());
     }
 
     @Override
@@ -81,7 +94,17 @@ public class NotifDrawerSettings extends SettingsPreferenceFragment
                     statusQuickPulldown);
             updateQuickPulldownSummary(statusQuickPulldown);
             return true;
-        }
+        } else if (preference == mStatusBarPowerMenu) {
+            String statusBarPowerMenu = (String) newValue;
+            int statusBarPowerMenuValue = Integer.parseInt(statusBarPowerMenu);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_POWER_MENU, statusBarPowerMenuValue);
+            int statusBarPowerMenuIndex = mStatusBarPowerMenu
+                    .findIndexOfValue(statusBarPowerMenu);
+            mStatusBarPowerMenu
+                    .setSummary(mStatusBarPowerMenu.getEntries()[statusBarPowerMenuIndex]);
+            return true;
+		}
         return false;
     }
 
