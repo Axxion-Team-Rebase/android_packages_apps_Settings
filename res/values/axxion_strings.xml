@@ -116,10 +116,6 @@
     
 	<!-- Custom tabs --> 
     <string name="bitsyko_layers">Layers</string>    
-    
-	<!-- Axxion settings screens -->
-    <string name="header_category_interface">Personalization</string>
-    <string name="axxion_settings_title">Axxionizations</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -439,4 +435,19 @@
     <string name="navigation_restore_button_text">Restore\ndefaults</string>
     <string name="navigation_edit_button_text">Edit</string>
     <string name="navigation_save_button_text">Save</string>
-</resources>
+
+    <!-- Recents panel settings -->
+    <string name="recents_panel_settings">Recents panel settings</string>
+    <string name="recents_panel_title">Recents Panel</string>    
+    <string name="show_clear_all_recents_button_title">Clear all recents button</string>
+    <string name="show_clear_all_recents_button_summary">Show clear all button on recents panel</string>
+    <string name="recents_clear_all_location_title">Clear all recents location</string>
+    <string name="recents_clear_all_location_right">Top right</string>
+    <string name="recents_clear_all_location_left">Top left</string>
+    
+    <!-- Axxion Categories -->
+	<!-- Axxion settings screens -->
+    <string name="header_category_interface">Personalization</string>
+    <string name="axxion_settings_title">Axxionizations</string>
+    <string name="bars_title">System Bars</string>
+    <string name="interface_title">Interface</string>
