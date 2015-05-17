@@ -102,8 +102,6 @@
     <string name="editor_instructions">Rearrange by dragging by the handle on the right. Remove by swiping.</string>
     <string name="save">Save</string>
     <string name="navigation_bar_longpress_timeout_text">Button longpress delay</string>
-    <string name="enable_navigation_ring_title">Navigation search assistant</string>
-    <string name="enable_navigation_ring_summary">Enable long-press on home for the google now search assistant</string>
     <string name="navbar_use_gallary_warning">Info: please select Gallery to save image</string>
 
     <!-- Navigation Bar left-handed mode -->
@@ -441,13 +439,7 @@
     <string name="picker_activities">Activities</string>
     <string name="select_custom_app_title">Select custom app</string>
     <string name="select_custom_activity_title">Select custom activity</string>   
-    
-    <!-- NavRing edit mode -->
-    <string name="navigation_ring_help_text">To get started tap the edit icon to unlock the navigation ring for editing.\n\nYou can tap an icon to change its shortcut, or long press an icon to re-arrange the layout.\n\nTap \'Save\' to commit your changes, or \'Restore defaults\' to reset the layout to default settings.</string>
-    <string name="navigation_restore_button_text">Restore\ndefaults</string>
-    <string name="navigation_edit_button_text">Edit</string>
-    <string name="navigation_save_button_text">Save</string>
-
+   
     <!-- Recents panel settings -->
     <string name="recents_panel_settings">Recents panel settings</string>
     <string name="recents_panel_title">Recents Panel</string>    
