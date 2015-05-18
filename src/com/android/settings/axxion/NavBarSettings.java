@@ -106,7 +106,7 @@ public class NavBarSettings extends SettingsPreferenceFragment
         }
 
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.navigation_settings);
+        addPreferencesFromResource(R.xml.nav_bar_settings);
         prefs = getPreferenceScreen();
 
         mCheckPreferences = true;

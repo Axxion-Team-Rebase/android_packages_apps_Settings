@@ -2,11 +2,7 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_JAVA_LIBRARIES := bouncycastle conscrypt telephony-common ims-common
-LOCAL_STATIC_JAVA_LIBRARIES := \
-        android-support-v4 \
-        android-support-v7-cardview \
-        android-support-v13 \
-        jsr305
+LOCAL_STATIC_JAVA_LIBRARIES := android-support-v4 android-support-v13 jsr305 android-support-v7-cardview
 
 LOCAL_MODULE_TAGS := optional
 
@@ -15,22 +11,20 @@ LOCAL_SRC_FILES := \
         src/com/android/settings/EventLogTags.logtags
 LOCAL_SRC_FILES += $(call all-java-files-under, ../OmniGears/src)
 
-LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
-LOCAL_RESOURCE_DIR += packages/apps/OmniGears/res
-LOCAL_RESOURCE_DIR := frameworks/support/v7/cardview/res
+
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
+    frameworks/support/v7/cardview/res \
+    packages/apps/OmniGears/res
 
 LOCAL_AAPT_FLAGS := --auto-add-overlay \
     --extra-packages org.omnirom.omnigears \
+    --extra-packages android.support.v7.cardview
 
 LOCAL_PACKAGE_NAME := Settings
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
-
-LOCAL_AAPT_FLAGS := \
-    --auto-add-overlay \
-    --extra-packages android.support.v7.cardview
 
 include frameworks/opt/setupwizard/navigationbar/common.mk
 

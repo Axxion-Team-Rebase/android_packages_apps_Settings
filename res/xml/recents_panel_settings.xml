@@ -42,7 +42,7 @@
         <!-- OmniSwitch -->
         <PreferenceScreen
             android:id="@+id/omniswitch"
-            android:title="@string/omniswitch_settings_title"
+            android:title="@string/omniswitch_category"
             android:fragment="com.android.settings.axxion.OmniSwitch" />
 
 </PreferenceScreen>

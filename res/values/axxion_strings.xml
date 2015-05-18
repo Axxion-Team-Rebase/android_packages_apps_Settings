@@ -404,7 +404,7 @@
     
     <!-- Status bar battery status settings -->
     <string name="status_bar_battery_status_settings_title">Battery icon</string>
-    <string name="status_bar_battery_status_settings_summary">Customize the battery icon</string      
+    <string name="status_bar_battery_status_settings_summary">Customize the battery icon</string>    
     <string name="battery_status_cat_circle_options_title">Customize the circle</string>
     <string name="battery_status_style_title">Indicator</string>
     <string name="battery_status_style_icon_portrait">Icon portrait</string>
@@ -455,3 +455,5 @@
     <string name="axxion_settings_title">Axxionizations</string>
     <string name="bars_title">System Bars</string>
     <string name="interface_title">Interface</string>
+
+</resources>

@@ -113,7 +113,7 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
-import com.android.settings.terminus.qs.QSTiles;
+import com.android.settings.axxion.qs.QSTiles;
 
 import org.omnirom.omnigears.ButtonSettings;
 import org.omnirom.omnigears.batterylight.BatteryLightSettings;
@@ -227,7 +227,6 @@ public class SettingsActivity extends Activity
             R.id.data_usage_settings,
             R.id.sim_settings,
             R.id.wireless_settings,
-            R.id.personalization_section,
             R.id.device_section,
             R.id.interface_section,
             R.id.notification_settings,
@@ -250,7 +249,6 @@ public class SettingsActivity extends Activity
             R.id.home_settings,
             R.id.button_settings,
             R.id.dashboard,
-            R.id.navigation_settings,
             R.id.axxion_settings    
     };
 
