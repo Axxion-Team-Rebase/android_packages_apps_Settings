@@ -35,7 +35,7 @@
     <string name="lockscreen_choose_action_title">Choose action</string>
 
     <string name="navigation_ring_enable_title">Enable navring panel</string>
-    <string name="navigation_ring_settings_title">Customize targets and actionns</string>
+    <string name="navigation_ring_settings_title">Customize targets and actions</string>
     <string name="navigation_bar_reset_message">Delete current settings and restore the default layout?</string>
     <string name="navigation_ring_title">Navigation ring</string>
     <string name="navigation_ring_message">Tap the edit icon to open the navigation ring for editing.\n\nSelect a target to configure its behavior.\n\nTap the check mark icon to save your changes, or restore to reset the settings to defaults.</string>
