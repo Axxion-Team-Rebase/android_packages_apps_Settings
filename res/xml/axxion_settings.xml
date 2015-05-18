@@ -55,6 +55,7 @@
 		<PreferenceScreen
 			android:id="@+id/recents_panel_settings"
 			android:title="@string/recents_panel_settings"
+			android:icon="@drawable/ic_settings_recents_teal"
 			android:fragment="com.android.settings.axxion.RecentsPanelSettings" />		
 			
     </PreferenceCategory>
