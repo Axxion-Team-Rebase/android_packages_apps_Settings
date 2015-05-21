@@ -21,23 +21,11 @@
         android:title="@string/navigation_bar_category">
         
         <com.android.settings.preference.SystemSettingSwitchPreference
-            android:key="navbar_force_enable"
-            android:title="@string/navbar_force_enable_title"
-            android:summary="@string/navbar_force_enable_summary"
-            android:defaultValue="false" />
-   
-        <com.android.settings.preference.SystemSettingSwitchPreference
             android:key="navigation_bar_left"
             android:title="@string/navigation_bar_left_title"
             android:summary="@string/navigation_bar_left_summary"
             android:dependency="navbar_force_enable"
             android:defaultValue="false" />
-            
-        <PreferenceScreen
-            android:key="navigation_bar"
-            android:title="@string/buttons_and_options_title"
-            android:fragment="com.android.settings.axxion.navbar.NavbarTabHostFragment"
-            android:dependency="navbar_force_enable" />
 
 	</PreferenceCategory>
 
