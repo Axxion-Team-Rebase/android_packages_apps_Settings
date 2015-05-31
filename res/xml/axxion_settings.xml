@@ -55,13 +55,23 @@
     
 	<PreferenceCategory
    		android:title="@string/recent_apps_settings_title">
-   		    
+
+        <SwitchPreference
+            android:key="use_slim_recents"
+            android:title="@string/use_slim_recents_title"
+            android:defaultValue="true" />   		    
+
 		<PreferenceScreen
 			android:key="recent_apps_settings"
 			android:title="@string/aosp_recent_apps_settings_title"
 			android:summary="@string/recent_apps_settings_summary"
 			android:fragment="com.android.settings.axxion.AndroidRecentsSettings" />
-       
+	
+		<PreferenceScreen
+			android:key="slim_recents"
+			android:fragment="com.android.settings.slim.SlimRecentPanel"
+			android:title="@string/slim_recents_title" />
+               
         <PreferenceScreen
             android:id="@+id/omniswitch"
             android:title="@string/omniswitch_category"

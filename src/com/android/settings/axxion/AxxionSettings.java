@@ -35,9 +35,15 @@ public class AxxionSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String GLOBAL_ACTIONS_POSITION = "global_action_position";
+    private static final String USE_SLIM_RECENTS = "use_slim_recents";
+    private static final String ANDROID_RECENTS = "recent_apps_settings";
+    private static final String SLIM_RECENTS = "slim_recents";
 
     ListPreference mGlobalActionsPosition;    
-
+    SwitchPreference mUseSlimRecents;
+	PreferenceScreen mSlimRecents;
+	PreferenceScreen mAndroidRecents;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +55,19 @@ public class AxxionSettings extends SettingsPreferenceFragment implements
                 .getContentResolver(), Settings.System.GLOBAL_ACTIONS_POSITION, 
                 0) + "");    
         mGlobalActionsPosition.setOnPreferenceChangeListener(this);
+        
+		mUseSlimRecents = (SwitchPreference) findPreference(USE_SLIM_RECENTS);
+        mUseSlimRecents.setOnPreferenceChangeListener(this); 
+        
+        boolean useSlimRecents =  Settings.System.getInt(getContentResolver(),
+                Settings.System.USE_SLIM_RECENTS, 0) == 1;
+        mSlimRecents = (PreferenceScreen) findPreference(SLIM_RECENTS);
+        mAndroidRecents = (PreferenceScreen) findPreference(ANDROID_RECENTS);
+        
+		mSlimRecents.setEnabled(useSlimRecents);
+		mAndroidRecents.setEnabled(!useSlimRecents);
+
+               
     }
 
     @Override
@@ -66,7 +85,11 @@ public class AxxionSettings extends SettingsPreferenceFragment implements
 			String option = entry.toString();
 			preference.setSummary(option);       						
 			return true;
-		}		
+		} else if (preference == mUseSlimRecents) {
+            Settings.System.putInt(getActivity().getContentResolver(), Settings.System.USE_SLIM_RECENTS,
+                    ((Boolean) newValue) ? 1 : 0);
+            return true;
+		}            
         return false;
     }
 }
