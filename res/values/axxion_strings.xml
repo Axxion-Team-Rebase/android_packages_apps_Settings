@@ -390,9 +390,6 @@
     <string name="bars_title">System Bars</string>
     <string name="interface_title">Interface</string>
 
-	<!-- Misc -->
-	<string name="percent_symbol">%</string>
-	
 	<!-- Custom legacy menu actions -->
 	<string name="legacy_menu_settings">Legacy Menu Buttons</string>	
 	<string name="legacy_menu_settings_summary">Customize legacy menu keys</string>	
