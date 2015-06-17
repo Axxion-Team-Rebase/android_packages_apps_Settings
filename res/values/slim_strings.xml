@@ -31,6 +31,7 @@
     <string name="shortcut_action_wake_device">Wake up device</string>
     <string name="shortcut_action_kill">Kill app</string>
     <string name="shortcut_action_screenshot">Screenshot</string>
+    <string name="shortcut_action_screenrecord">Screenrecord</string>    
     <string name="shortcut_action_lastapp">Last app</string>
     <string name="shortcut_action_notifications">Notifications</string>
     <string name="shortcut_action_qs">Quicksettings panel</string>
@@ -71,15 +72,7 @@
 
 
     <!-- Navigation bar -->
-    <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
-    <string name="navigation_bar_size_36_dp">36 dp</string>
-    <string name="navigation_bar_size_30_dp">30 dp</string>
-    <string name="navigation_bar_size_24_dp">24 dp</string>
-    <string name="navigation_bar_size_48_dp_default">48 dp (default)</string>
-    <string name="navigation_bar_size_44_dp">44 dp</string>
-    <string name="navigation_bar_size_40_dp">40 dp</string>
-    <string name="navigation_bar_size_42_dp">42 dp</string>
-    <string name="navigation_bar_size_0_dp">0 dp (off)</string>
+	<string name="navigation_bar_category">Navigation bar</string> 
     <string name="navigation_menu_right">Right</string>
     <string name="navigation_menu_left">Left</string>
     <string name="navigation_menu_both">Both</string>
@@ -95,15 +88,12 @@
     <string name="navbar_enable_bar">Enable navigation bar</string>
     <string name="navbar_enable_bar_summary">Enable the navigation bar</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
-    <string name="navigation_bar_height_summary">Navigation bar height while in portrait.</string>
     <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
-    <string name="navigation_bar_height_landscape_summary">Navigation bar height while in landscape.</string>
     <string name="navigation_bar_width_title">Navigation bar width</string>
-    <string name="navigation_bar_width_summary">Navigation bar height if the bar is along a side.</string>
     <string name="navbar_can_move">Show landscape</string>
     <string name="navbar_can_move_summary">Shows navigation bar in landscape on the bottom</string>
-    <string name="navbar_style_dimen_title">Dimensions</string>
-    <string name="navbar_button_title">Buttons</string>
+    <string name="navbar_style_dimen_title">Change dimensions</string>
+    <string name="navbar_button_title">Customize buttons</string>
     <string name="navbar_cat">Navigation bar</string>
     <string name="navbar_dimensions_reset_message">Reset all dimensions entries to default?</string>
     <string name="navbar_button_style_reset_message">Reset all style entries to default?</string>
