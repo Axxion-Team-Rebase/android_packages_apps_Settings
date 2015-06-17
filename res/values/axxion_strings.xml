@@ -398,5 +398,15 @@
 	<string name="legacy_menu_left_action_title">Legacy left menu button action</string>	
 	<string name="legacy_menu_left_long_action_title">Legacy left menu button long-press action</string>	
 	<string name="legacy_menu_right_action_title">Legacy right menu button action</string>	
-	<string name="legacy_menu_right_long_action_title">Legacy right menu button long-press action</string>	
+	<string name="legacy_menu_right_long_action_title">Legacy right menu button long-press action</string>
+	
+	<!-- Global Actions Tweaks (0 value uses already defined string)-->
+	<string name="power_menu_cat">Power Menu</string>	
+	<string name="show_sound_panel_title">Show sound panel</string>	
+	<string name="global_actions_position_title">Power menu position</string>	
+	<string name="position_bottom">Bottom</string>	
+	<string name="position_top">Top</string>	
+	<string name="position_center_right">Center (Right to left animation)</string>	
+	<string name="position_center_left">Center (Left to right animation)</string>	
+	
 </resources>
