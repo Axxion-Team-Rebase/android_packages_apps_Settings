@@ -50,16 +50,25 @@
 			android:fragment="com.android.settings.axxion.HeadsUpSettings"
 			android:title="@string/category_heads_up"
 			android:icon="@drawable/ic_headsup" /> 		
-
-		<!-- Recents panel settings -->
-		<PreferenceScreen
-			android:id="@+id/recents_panel_settings"
-			android:title="@string/recents_panel_settings"
-			android:icon="@drawable/ic_settings_recents_teal"
-			android:fragment="com.android.settings.axxion.RecentsPanelSettings" />		
 			
     </PreferenceCategory>
     
+	<PreferenceCategory
+   		android:title="@string/recent_apps_settings_title">
+   		    
+		<PreferenceScreen
+			android:key="recent_apps_settings"
+			android:title="@string/aosp_recent_apps_settings_title"
+			android:summary="@string/recent_apps_settings_summary"
+			android:fragment="com.android.settings.axxion.AndroidRecentsSettings" />
+       
+        <PreferenceScreen
+            android:id="@+id/omniswitch"
+            android:title="@string/omniswitch_category"
+            android:fragment="com.android.settings.axxion.OmniSwitch" />
+               		    
+    </PreferenceCategory>
+   		    
 	<PreferenceCategory
    		android:title="@string/power_menu_cat">    
                     

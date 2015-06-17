@@ -375,14 +375,26 @@
     <string name="select_custom_activity_title">Select custom activity</string>   
    
     <!-- Recents panel settings -->
-    <string name="recents_panel_settings">Recents panel settings</string>
-    <string name="recents_panel_title">Recents Panel</string>    
-    <string name="show_clear_all_recents_button_title">Clear all recents button</string>
-    <string name="show_clear_all_recents_button_summary">Show clear all button on recents panel</string>
-    <string name="recents_clear_all_location_title">Clear all recents location</string>
-    <string name="recents_clear_all_location_right">Top right</string>
-    <string name="recents_clear_all_location_left">Top left</string>
-    
+    <string name="aosp_recent_apps_settings_title">Android recents panel</string> <!-- Needs translation -->
+    <string name="recent_apps_settings_title">Recent apps view</string> <!-- Needs translation -->
+	<string name="recent_apps_settings_summary">Customize aosp recent apps view</string> <!-- Needs translation -->
+
+    <!-- Android recents settings -->
+    <string name="android_recents_cat_clear_all_button_title">Clear all button</string>
+    <string name="android_recents_show_search_bar_title">Show search bar</string>
+    <string name="android_recents_show_search_bar_summary">Enable to show the search bar</string>
+    <string name="android_recents_show_clear_all_summary">Enable to show the clear all button</string>
+    <string name="android_recents_clear_all_position_horizontal_title">Position horizontal</string>
+    <string name="android_recents_clear_all_position_vertical_title">Position vertical</string>
+    <string name="android_recents_clear_all_position_left">Left</string>
+    <string name="android_recents_clear_all_position_right">Right</string>
+    <string name="android_recents_clear_all_position_center">Center</string>
+    <string name="android_recents_clear_all_position_top">Top</string>
+    <string name="android_recents_clear_all_position_bottom">Bottom</string>
+    <string name="android_recents_clear_all_use_icon_color_title">Icon color</string>
+    <string name="android_recents_clear_all_use_icon_color_summary">Enable to use a custom color for the clear all button icon</string>
+
+  
     <!-- Axxion Categories -->
 	<!-- Axxion settings screens -->
     <string name="header_category_interface">Personalization</string>

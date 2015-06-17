@@ -369,16 +369,23 @@
         <item>3</item>
         <item>5</item>
     </string-array>	 
-    
-    <!-- clear all recents button location -->
-    <string-array name="recents_clear_all_location_entries">
-        <item>@string/recents_clear_all_location_right</item>
-        <item>@string/recents_clear_all_location_left</item>
+
+    <string-array name="recent_apps_clear_all_position_horizontal_entries" >
+        <item>@string/recent_apps_clear_all_position_left</item>
+        <item>@string/recent_apps_clear_all_position_center</item>
+        <item>@string/recent_apps_clear_all_position_right</item>
     </string-array>
 
-    <string-array name="recents_clear_all_location_values" translatable="false">
+    <string-array name="recent_apps_clear_all_position_vertical_entries" >
+        <item>@string/recent_apps_clear_all_position_top</item>
+        <item>@string/recent_apps_clear_all_position_center</item>
+        <item>@string/recent_apps_clear_all_position_bottom</item>
+    </string-array>
+
+    <string-array name="recent_apps_clear_all_position_values" translatable="false">
         <item>0</item>
         <item>1</item>
+        <item>2</item>
     </string-array>   
    
    <!-- Legacy menu customizations -->
