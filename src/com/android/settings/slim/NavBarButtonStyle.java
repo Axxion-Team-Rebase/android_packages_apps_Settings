@@ -121,7 +121,7 @@ public class NavBarButtonStyle extends SettingsPreferenceFragment implements
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         menu.add(0, MENU_RESET, 0, R.string.reset)
-                .setIcon(R.drawable.ic_settings_reset_button) // use the reset settings icon
+                .setIcon(R.drawable.ic_settings_reset) // use the reset settings icon
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
 

@@ -118,7 +118,6 @@ import com.android.settings.axxion.qs.QSTiles;
 import org.omnirom.omnigears.ButtonSettings;
 import org.omnirom.omnigears.batterylight.BatteryLightSettings;
 import org.omnirom.omnigears.brightness.ButtonBrightnessSettings;
-import com.android.settings.axxion.NavBarSettings;
 import com.android.settings.axxion.AxxionSettings;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -317,7 +316,6 @@ public class SettingsActivity extends Activity
             ButtonSettings.class.getName(),
             BatteryLightSettings.class.getName(),
             ButtonBrightnessSettings.class.getName(),
-			NavBarSettings.class.getName(),
 	        AxxionSettings.class.getName(),
 			QSTiles.class.getName(),
     };
