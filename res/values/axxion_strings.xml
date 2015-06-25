@@ -36,6 +36,9 @@
     <string name="reset_axxion">Axxion</string>
     <string name="reset_option_message">Reset values to\nAndroid- or Axxion default?</string>
     <string name="positive_done">Done</string>
+    <string name="show">Show</string>
+    <string name="background">Background</string>
+    <string name="icon">Icon</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>

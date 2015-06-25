@@ -16,7 +16,7 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/android_recents_settings_title">
+    android:title="@string/aosp_recent_apps_settings_title">
 
     <SwitchPreference
         android:key="android_recents_show_search_bar"
@@ -29,7 +29,7 @@
 
         <SwitchPreference
             android:key="android_recents_show_clear_all"
-            android:title="@string/show_title"
+            android:title="@string/show"
             android:summary="@string/android_recents_show_clear_all_summary" />
 
         <ListPreference
@@ -53,12 +53,12 @@
 
          <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="android_recents_clear_all_bg_color"
-            android:title="@string/background_title"
+            android:title="@string/background"
             android:defaultValue="0xff009688" />
 
          <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="android_recents_clear_all_icon_color"
-            android:title="@string/icon_title"
+            android:title="@string/icon"
             android:defaultValue="0xffffffff" />
 
 	</PreferenceCategory>

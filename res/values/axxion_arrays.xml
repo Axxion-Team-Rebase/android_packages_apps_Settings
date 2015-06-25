@@ -370,19 +370,19 @@
         <item>5</item>
     </string-array>	 
 
-    <string-array name="recent_apps_clear_all_position_horizontal_entries" >
-        <item>@string/recent_apps_clear_all_position_left</item>
-        <item>@string/recent_apps_clear_all_position_center</item>
-        <item>@string/recent_apps_clear_all_position_right</item>
+    <string-array name="android_recents_clear_all_position_horizontal_entries" >
+        <item>@string/android_recents_clear_all_position_left</item>
+        <item>@string/android_recents_clear_all_position_center</item>
+        <item>@string/android_recents_clear_all_position_right</item>
     </string-array>
 
-    <string-array name="recent_apps_clear_all_position_vertical_entries" >
-        <item>@string/recent_apps_clear_all_position_top</item>
-        <item>@string/recent_apps_clear_all_position_center</item>
-        <item>@string/recent_apps_clear_all_position_bottom</item>
+    <string-array name="android_recents_clear_all_position_vertical_entries" >
+        <item>@string/android_recents_clear_all_position_top</item>
+        <item>@string/android_recents_clear_all_position_center</item>
+        <item>@string/android_recents_clear_all_position_bottom</item>
     </string-array>
 
-    <string-array name="recent_apps_clear_all_position_values" translatable="false">
+    <string-array name="android_recents_clear_all_position_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>

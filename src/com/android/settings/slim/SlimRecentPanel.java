@@ -48,10 +48,10 @@ import com.android.internal.util.slim.DeviceUtils;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class RecentPanel extends SettingsPreferenceFragment implements DialogCreatable,
+public class SlimRecentPanel extends SettingsPreferenceFragment implements DialogCreatable,
         Preference.OnPreferenceChangeListener {
 
-    private static final String TAG = "RecentPanelSettings";
+    private static final String TAG = "SlimRecentPanel";
 
     // Preferences
     private static final String ONLY_SHOW_RUNNING_TASKS = "only_show_running_tasks";
