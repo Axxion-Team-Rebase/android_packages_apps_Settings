@@ -19,44 +19,38 @@
     android:title="@string/axxion_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-      
-	<!-- Axxion logo -->
-	<PreferenceScreen android:key="logo"
-		android:enabled="false"
-        android:layout="@layout/rom_logo" />
-                
 	<PreferenceCategory
    		android:title="@string/bars_title">
 
 		<PreferenceScreen
 			android:key="status_bar"
 			android:fragment="com.android.settings.axxion.StatusBar"
-            android:icon="@drawable/ic_settings_extdesk_hidenavbar"			
+            android:icon="@drawable/ic_settings_extdesk_hidenavbar"
 			android:title="@string/status_bar_title" />
-			
+
 		<PreferenceScreen
 			android:key="nav_bar_settings"
 			android:fragment="com.android.settings.slim.NavbarSettings"
 			android:icon="@drawable/ic_settings_extdesk_hidestatusbar"
 			android:title="@string/navigation_bar_category" /> 	
-				
+
     </PreferenceCategory>
 
 	<PreferenceCategory
    		android:title="@string/interface_title">
-   		
+
 		<PreferenceScreen
 			android:key="notif_drawer_settings"
 			android:fragment="com.android.settings.axxion.NotifDrawerSettings"
 			android:icon="@drawable/ic_settings_notification_drawer"
 			android:title="@string/notif_drawer_title" />
-		
+
 		<PreferenceScreen
 			android:key="heads_up_enabled"
 			android:fragment="com.android.settings.axxion.HeadsUpSettings"
 			android:title="@string/category_heads_up"
-			android:icon="@drawable/ic_headsup" /> 		
-			
+			android:icon="@drawable/ic_headsup" />
+
     </PreferenceCategory>
     
 	<PreferenceCategory
@@ -74,32 +68,44 @@
 			android:fragment="com.android.settings.axxion.AndroidRecentsSettings" />
 	
 		<PreferenceScreen
+            android:dependency="use_slim_recents"
 			android:key="slim_recents"
 			android:fragment="com.android.settings.slim.SlimRecentPanel"
-			android:dependency="use_slim_recents"			
 			android:title="@string/slim_recents_title" />
-               
+
         <PreferenceScreen
             android:id="@+id/omniswitch"
             android:title="@string/omniswitch_category"
             android:fragment="com.android.settings.axxion.OmniSwitch" />
-               		    
+
     </PreferenceCategory>
-   		    
+
 	<PreferenceCategory
-   		android:title="@string/power_menu_cat">    
-                    
-		<com.android.settings.preference.SystemSettingSwitchPreference
+		android:title="@string/power_menu_cat">
+
+
+		<com.android.settings.preference.SecureSettingSwitchPreference
+			android:key="advanced_reboot"
+			android:title="@string/advanced_reboot_title"
+			android:summary="@string/advanced_reboot_summary"
+			android:defaultValue="false" />
+
+		<com.android.settings.preference.SystemCheckBoxPreference
 			android:key="global_actions_show_sound_panel"
 			android:title="@string/show_sound_panel_title"
 			android:defaultValue="true" /> 
-			
+		
+		<com.android.settings.preference.SystemCheckBoxPreference
+			android:key="global_actions_show_airplane_toggle"
+			android:title="@string/show_airplane_toggle_title"
+			android:defaultValue="false" /> 
+
 		<ListPreference
             android:key="global_action_position"
 			android:entries="@array/global_actions_position_entries"
 			android:entryValues="@array/global_actions_position_values"
 			android:title="@string/global_actions_position_title"
 			android:defaultValue="0" />    
-			
-    </PreferenceCategory>			                   
+
+    </PreferenceCategory>
 </PreferenceScreen>

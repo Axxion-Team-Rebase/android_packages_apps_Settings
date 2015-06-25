@@ -418,6 +418,7 @@
 	<!-- Global Actions Tweaks (0 value uses already defined string)-->
 	<string name="power_menu_cat">Power Menu</string>	
 	<string name="show_sound_panel_title">Show sound panel</string>	
+	<string name="show_airplane_toggle_title">Show airplane toggle</string>		
 	<string name="global_actions_position_title">Power menu position</string>	
 	<string name="position_bottom">Bottom</string>	
 	<string name="position_top">Top</string>	
