@@ -19,6 +19,11 @@
     android:title="@string/axxion_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+        <!-- Axxion logo -->
+        <PreferenceScreen android:key="logo"
+                android:layout="@layout/rom_logo"
+                android:fragment="com.android.settings.axxion.About" />
+                
 	<PreferenceCategory
    		android:title="@string/bars_title">
 
@@ -106,6 +111,16 @@
 			android:entryValues="@array/global_actions_position_values"
 			android:title="@string/global_actions_position_title"
 			android:defaultValue="0" />    
+
+    </PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="@string/misc_cat">
+		
+		<com.android.settings.preference.SystemSettingSwitchPreference
+			android:key="volume_music_controls"
+			android:title="@string/volume_music_controls_title"
+			android:summary="@string/volume_music_controls_summary" />
 
     </PreferenceCategory>
 </PreferenceScreen>

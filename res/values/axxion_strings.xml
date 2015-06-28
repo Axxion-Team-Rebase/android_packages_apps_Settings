@@ -424,5 +424,36 @@
 	<string name="position_top">Top</string>	
 	<string name="position_center_right">Center (Right to left animation)</string>	
 	<string name="position_center_left">Center (Left to right animation)</string>	
+
+	<!-- Misc -->
+	<string name="misc_cat">Miscellaneous</string>	
 	
+	<!-- About axxion -->
+    <string name="about_axxion">About Axxion</string>
+    
+    	<!-- Changelog -->
+    <string name="changelog_axxion_title">Changelog</string>
+    <string name="changelog_axxion_error">Unable to load changelog</string>
+
+    <!-- Share axxion -->
+    <string name="share_axxion_title">Share AxxionPop</string>
+    <string name="share_axxion_summary">Let others know about us!</string>
+    <string name="share_message">Check out what #axxion is all about @ https://plus.google.com/u/0/communities/106623648877858799989</string>
+    <string name="share_chooser_title">Share AxxionPop</string>
+    
+    <!-- Sites axxion -->
+    <string name="sites_axxion">Links</string>
+    <string name="axxion_team">The Team</string>
+    <string name="axxion_donate_title">Donate</string>
+    <string name="axxion_download_title">Downloads</string>
+    <string name="axxion_donate_summary">Support us by giving a donation</string>
+    <string name="axxion_download_summary">Check our download page for new builds</string>
+    <string name="axxion_source_title">Github</string>
+    <string name="axxion_source_summary">Visit our source</string>
+    <string name="axxion_google_plus_title">Google+</string>
+    <string name="axxion_google_plus_summary">Visit our G+ community for support and news</string>
+    
+     <!--Volume buttons music control-->
+     <string name="volume_music_controls_title">Volume buttons music controls</string>
+     <string name="volume_music_controls_summary">When the screen is off, long pressing the volume buttons will seek music tracks</string>    
 </resources>
