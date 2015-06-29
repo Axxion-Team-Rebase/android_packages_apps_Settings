@@ -18,8 +18,8 @@ package com.android.settings.slim.qs;
 import android.content.Context;
 
 import android.text.TextUtils;
-import com.android.internal.util.slim.QSConstants;
-import com.android.internal.util.slim.QSUtils;
+import com.android.internal.util.cm.QSConstants;
+import com.android.internal.util.cm.QSUtils;
 import com.android.settings.R;
 
 import java.util.Arrays;
@@ -47,18 +47,6 @@ public class QSTileHolder {
 
         if (!TILE_ADD_DELETE.equals(tileType) &&
                 !QSUtils.getAvailableTiles(context).contains(tileType)) {
-            return null;
-        }
-
-        // We need to filter out the LTE tile manually, because
-        // filtering via getAvailableTiles during fwb init
-        // disallows reading our system prop
-        // Hide the tile if device doesn't support LTE
-        // or it supports Dual Sim Dual Active.
-        // TODO: Should be spawning off a tile per sim
-        if (TextUtils.equals(QSConstants.TILE_LTE, tileType)
-                && (!QSUtils.deviceSupportsLte(context)
-                || QSUtils.deviceSupportsDdsSupported(context))) {
             return null;
         }
 
@@ -108,10 +96,6 @@ public class QSTileHolder {
             case QSConstants.TILE_ADB_NETWORK:
                 resourceName = "ic_qs_network_adb_on";
                 stringId = R.string.qs_tile_adb_over_network;
-                break;
-            case QSConstants.TILE_LTE:
-                resourceName = "ic_qs_lte_on";
-                stringId = R.string.qs_tile_lte;
                 break;
             case QSConstants.TILE_NFC:
                 resourceName = "ic_qs_nfc_on";
