@@ -455,5 +455,8 @@
     
      <!--Volume buttons music control-->
      <string name="volume_music_controls_title">Volume buttons music controls</string>
-     <string name="volume_music_controls_summary">When the screen is off, long pressing the volume buttons will seek music tracks</string>    
+     <string name="volume_music_controls_summary">When the screen is off, long pressing the volume buttons will seek music tracks</string> 
+     
+	<string name="heads_up_floating_window_title">Heads Up</string>
+	<string name="heads_up_floating_window_summary">Longpress and release to open in float mode when not on home screen</string>        
 </resources>
