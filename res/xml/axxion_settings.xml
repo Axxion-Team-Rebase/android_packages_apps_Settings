@@ -118,6 +118,12 @@
 		android:title="@string/misc_cat">
 		
 		<com.android.settings.preference.SystemSettingSwitchPreference
+            android:key="slim_action_floats"
+            android:title="@string/slim_action_floats"
+            android:summary="@string/slim_action_floats_summary"
+            android:defaultValue="false" />
+		
+		<com.android.settings.preference.SystemSettingSwitchPreference
 			android:key="volume_music_controls"
 			android:title="@string/volume_music_controls_title"
 			android:summary="@string/volume_music_controls_summary" />
